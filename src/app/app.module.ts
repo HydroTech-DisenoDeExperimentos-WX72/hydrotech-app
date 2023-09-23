@@ -16,14 +16,17 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
-
-
+import {MatChipsModule} from '@angular/material/chips';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+import { ArticlesComponent } from './components/articles/articles.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
     CoursesComponent,
+    ArticlesComponent,
     
   ],
   imports: [
@@ -37,7 +40,10 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     MatIconModule,
     MatGridListModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    MatListModule,
+    MatDividerModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
