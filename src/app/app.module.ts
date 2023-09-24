@@ -22,7 +22,6 @@ import {MatDividerModule} from '@angular/material/divider';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { ComunnityComponent } from './components/comunnity/comunnity.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
@@ -37,6 +36,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   ],
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -45,15 +45,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HomeComponent,
     MatIconModule,
     MatGridListModule,
+    MatPaginatorModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     MatListModule,
     MatDividerModule,
-    MatChipsModule,
-    ComunnityComponent,
-    FlexLayoutModule,
-    MatFormFieldModule,
-    MatPaginatorModule
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
