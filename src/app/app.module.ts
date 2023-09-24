@@ -20,6 +20,10 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import { ArticlesComponent } from './components/articles/articles.component';
+import { ComunnityComponent } from './components/comunnity/comunnity.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,10 +31,12 @@ import { ArticlesComponent } from './components/articles/articles.component';
     FooterComponent,
     CoursesComponent,
     ArticlesComponent,
+    ComunnityComponent,
     
   ],
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -39,6 +45,7 @@ import { ArticlesComponent } from './components/articles/articles.component';
     HomeComponent,
     MatIconModule,
     MatGridListModule,
+    MatPaginatorModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     MatListModule,
