@@ -20,6 +20,11 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import { ArticlesComponent } from './components/articles/articles.component';
+import { ComunnityComponent } from './components/comunnity/comunnity.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +32,7 @@ import { ArticlesComponent } from './components/articles/articles.component';
     FooterComponent,
     CoursesComponent,
     ArticlesComponent,
+    ComunnityComponent,
     
   ],
   imports: [
@@ -43,7 +49,11 @@ import { ArticlesComponent } from './components/articles/articles.component';
     provideAuth(() => getAuth()),
     MatListModule,
     MatDividerModule,
-    MatChipsModule
+    MatChipsModule,
+    ComunnityComponent,
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
