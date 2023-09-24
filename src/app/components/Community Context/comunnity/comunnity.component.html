@@ -1,0 +1,151 @@
+<br />
+<br />
+<br />
+<br />
+<div
+  fxLayout.xs="column"
+  fxLayoutAlign.xs="stretch start"
+  fxLayout="row"
+  fxLayoutAlign="space-between"
+>
+  <!-- Columna 1: Lista de temas populares -->
+  <div fxFlex.xs="100" fxFlex.gt-sm="20">
+    <div class="border-trending">
+      <div class="trending">
+        <div class="trending-content">
+          <h3>Temas Populares</h3>
+          <p>Oportunidades de Negocios en Ferias Agrícolas</p>
+          <p>Iniciando en la Hidroponía: Consejos para Principiantes</p>
+          <p>Iniciando en la Hidroponía: Consejos para Principiantes</p>
+          <p>Iniciando en la Hidroponía: Consejos para Principiantes</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Columna 2: Barra de búsqueda y sección de posts -->
+  <!--
+  <mat-toolbar >
+    <mat-toolbar-row>
+      
+      <mat-form-field>
+        <input matInput placeholder="Buscar" />
+      </mat-form-field>
+    </mat-toolbar-row>
+  </mat-toolbar>
+-->
+
+  <!--Barra de busqueda-->
+  <div fxFlex.xs="100" fxFlex.gt-sm="60">
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Compartamos lo que pasa por tu mente..."
+        name="input-post"
+      />
+      <button>Crear Post</button>
+    </div>
+    <div class="posts">
+      <!-- Post 1 -->
+      <div class="post-header">
+        <h3>Eventos y ferias agrícolas</h3>
+      </div>
+      <div class="post">
+        <div class="post-content">
+          <img src="https://media.discordapp.net/attachments/1148057148522233868/1154875356520648795/pexels-dima-valkov-6503007_4.png" alt="Imagen del Post" />
+          <div class="post-details">
+            <h4>Oportunidades de Negocios en Ferias Agrícolas</h4>
+            <div class="tags">
+              <span>Etiqueta 1</span>
+              <span>Etiqueta 2</span>
+              <!-- Agrega más etiquetas aquí -->
+            </div>
+            <p>Arturo Vidal</p>
+            <p class="post-date">2 weeks ago</p>
+            <div class="interaction">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <!-- Ícono de corazón -->
+            </div>
+            <div class="post-stats">
+              <span>Views: 100</span>
+              <span>Likes: 50</span>
+              <span>Comments: 30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agrega más posts aquí si es necesario -->
+    </div>
+
+    <div class="posts">
+      <!-- Post 1 -->
+      <div class="post-header">
+        <h3>Eventos y ferias agrícolas</h3>
+      </div>
+      <div class="post">
+        <div class="post-content">
+          <img src="https://media.discordapp.net/attachments/1148057148522233868/1154875355967004795/pexels-dima-valkov-6211616_1_3.png" alt="Imagen del Post" />
+          <div class="post-details">
+            <h4>Oportunidades de Negocios en Ferias Agrícolas</h4>
+            <div class="tags">
+              <span>Etiqueta 1</span>
+              <span>Etiqueta 2</span>
+              <!-- Agrega más etiquetas aquí -->
+            </div>
+            <p>Lionel Messi</p>
+            <p class="post-date">1 weeks ago</p>
+            <div class="interaction">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <!-- Ícono de corazón -->
+            </div>
+            <div class="post-stats">
+              <span>Views: 10000</span>
+              <span>Likes: 5000</span>
+              <span>Comments: 300</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agrega más posts aquí si es necesario -->
+    </div>
+
+    <!-- Paginador 
+      <mat-paginator
+        [length]="4"
+        [pageSize]="4"
+        [pageSizeOptions]="[5, 10, 20]"
+      ></mat-paginator>
+    -->
+  </div>
+  <!-- Sección de posts -->
+
+  <!-- Columna 3: Publicidades (imágenes estáticas) -->
+  <div fxFlex.xs="100" fxFlex.gt-sm="20">
+    <div class="advertising">
+      <p>Publicidad</p>
+      <a
+        href="https://www.agrisolucion.com/distribuidor/ver/greenhow/"
+        target="_blank"
+      >
+        <img
+          class="advertising-image"
+          src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=509&height=676"
+          alt="Publicidad 1"
+        />
+      </a>
+      <a
+        href="https://www.agrisolucion.com/distribuidor/ver/greenhow/"
+        target="_blank"
+      >
+        <img
+          class="advertising-image"
+          src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=509&height=676"
+          alt="Publicidad 2"
+        />
+      </a>
+      <!-- Agrega más publicidades aquí -->
+    </div>
+  </div>
+</div>
