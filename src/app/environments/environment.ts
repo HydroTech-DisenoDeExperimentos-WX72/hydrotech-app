@@ -1,6 +1,6 @@
 export const environment = {
   firebase: {
-    projectId: 'angular-auth-opsource',
+    projectId: 'deploy-greengrow',
     appId: '1:937225638162:web:0f322e48242c8a7a06a3cb',
     storageBucket: 'angular-auth-opsource.appspot.com',
     apiKey: 'AIzaSyBikZNdrzDEry1coAIKih8QcTjEfmBMmAM',
