@@ -111,7 +111,15 @@ img.medium{
     background-color: white;
     color: #224f34;
     border-color: #224f34;
+    text-align: center;
 }
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .subBtn{
     background-color: #224f34;

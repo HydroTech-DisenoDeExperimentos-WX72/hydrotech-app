@@ -1,0 +1,77 @@
+{
+    "courses":[
+        {
+            "id":1,
+            "name":"Fundamentos de la Hidroponía",
+            "image":"https://cdn.discordapp.com/attachments/1148057148522233868/1155527206471204874/curso1.png",
+            "description":"Aprende de la mano de los expertos los fundamentos de la hidroponía y cómo puedes aplicarlos en tu propio huerto.",
+            "price":0.00,
+            "rating":5.0
+        },
+        {
+            "id":2,
+            "name": "Cultivo Avanzado en Interiores",
+            "image":"https://cdn.discordapp.com/attachments/1148057148522233868/1155527206865485945/curso2.png",
+            "description": "Curso avanzado de cultivo en interiores. Aprende a cultivar tus propios alimentos en casa con las técnicas más avanzadas.",
+            "price": 62.99,
+            "rating": 4.9
+        },
+        {
+            "id":3,
+            "name": "Sostenibilidad en la Agricultura Urbana",
+            "image":"https://cdn.discordapp.com/attachments/1148057148522233868/1155527207159078922/curso3.png",
+            "description": "Explora prácticas agrícolas y estrategias de cultivo que promueven la coexistencia armoniosa entre la agricultura y las ciudades, abordando los desafíos de la seguridad alimentaria.",
+            "price": 49.99,
+            "rating": 5.0
+        },
+        {
+            "id": 4,
+            "name": "Hidroponía en casa",
+            "image":"https://cdn.discordapp.com/attachments/1148057148522233868/1155527207503003748/curso4.png",
+            "description": "Aprende a cultivar tus propias plantas en casa con este curso fácil y práctico. Descubre los secretos de la hidroponía y cómo aplicarlos en tu hogar para obtener alimentos frescos y saludables. Con instrucciones detalladas y materiales fáciles de conseguir, este curso es perfecto para cualquier persona interesada en la jardinería en casa.",
+            "price": 48.99,
+            "rating": 5.0
+        },
+        {
+            "id": 5, 
+            "name": "Cultivo Orgánico",
+            "image":"https://cdn.discordapp.com/attachments/1148057148522233868/1155527207905673297/curso5.png",
+            "description":"Aprende la importancia de la agricultura orgánica y cómo puedes aplicarla en tu propio huerto.",
+            "price": 39.00,
+            "rating": 4.9
+        },
+        {
+            "id": 6,
+            "name": "Nutrición de Plantas",
+            "image":"https://cdn.discordapp.com/attachments/1148057148522233868/1155527205720432761/curso6.png",
+            "description": "En este curso aprenderás sobre la nutrición de las plantas, los nutrientes esenciales y cómo aplicarlos en tu propio huerto.",
+            "price": 42.99,
+            "rating": 4.8
+        },
+        {
+            "id": 7,
+            "name": "Agricultura Vertical",
+            "image":"https://cdn.discordapp.com/attachments/1148057148522233868/1155527243091693699/curso7.png",
+            "description": "Aprende sobre la Agricultura Vertical, su importancia, y las mejores maneras de realizarla.",
+            "price": 32.99,
+            "rating": 4.7
+        },
+        {
+            "id": 8,
+            "name": "Jardinería Interior",
+            "image":"https://cdn.discordapp.com/attachments/1148057148522233868/1155527243595006024/curso8.png",
+            "description": "Aprende de la mano de los expertos la jardinería interior a tu hogar.",
+            "price": 39.99,
+            "rating": 5.0
+        },
+        {
+            "id": 9,
+            "name": "Hierbas Frescas",
+            "image":"https://cdn.discordapp.com/attachments/1148057148522233868/1155527243972497478/curso9.png",
+            "description": "Aprende a cultivar tus propias hierbas frescas en casa con este curso fácil y práctico. Descubre los secretos de la hidroponía y cómo aplicarlos en tu hogar para obtener alimentos frescos y saludables. Con instrucciones detalladas y materiales fáciles de conseguir, este curso es perfecto para cualquier persona interesada en la jardinería en casa.",
+            "price": 39.95,
+            "rating": 4.7
+        }
+
+    ]
+}

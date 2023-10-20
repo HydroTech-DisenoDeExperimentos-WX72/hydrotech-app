@@ -23,6 +23,7 @@ import { ArticlesComponent } from './components/Educational Content Context/arti
 import { ComunnityComponent } from './components/Community Context/comunnity/comunnity.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     provideAuth(() => getAuth()),
     MatListModule,
     MatDividerModule,
-    MatChipsModule
+    MatChipsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
