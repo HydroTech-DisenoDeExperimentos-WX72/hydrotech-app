@@ -7,40 +7,48 @@
         <br>
         <br>
         <br>
-        <h1 class="title">
-            Explorar temas y habilidades
-        </h1>
+        <div class="top">
+            <h1 class="title">
+                Explore issues and skills
+            </h1>
+            
+            <button mat-raised-button color="disabled" (click)="openAddCourse()">Add Course</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
         
 
         <mat-grid-list [cols]="breakpoint" cols="3" rowHeight="4:2" (window:resize)="onResize($event)">
             <mat-grid-tile rowspan="2">
             <div class="box">
                 <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154970255370760252/Rectangle_1135.png" alt="Hidroponia">
-                <div class="topleft">HIDROPONIA</div>
+                <div class="topleft">HYDROPONICS</div>
             </div>
             </mat-grid-tile>
             <mat-grid-tile>
                 <div class="box">
                     <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154970255639191602/Rectangle_1136.png" alt="Agronegocios">
-                    <div class="bottomleft">AGRONEGOCIOS</div>
+                    <div class="bottomleft">AGRIBUSINESS</div>
                 </div>
             </mat-grid-tile>
             <mat-grid-tile>
                 <div class="box">
                     <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154970255945367613/Rectangle_1137.png" alt="Horticultura">
-                    <div class="bottomleft">HORTICULTURA</div>
+                    <div class="bottomleft">HORTICULTURE</div>
                 </div>
             </mat-grid-tile>
             <mat-grid-tile>
                 <div class="box">
                     <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154970256775848026/Rectangle_1139.png" alt="Riego">
-                    <div class="bottomleft">RIEGO</div>
+                    <div class="bottomleft">IRRIGATION</div>
                 </div>
             </mat-grid-tile>
             <mat-grid-tile>
                 <div class="box">
                     <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154970256213815389/Rectangle_1138.png" alt="Agricultura Vertical">
-                    <div class="bottomleft">AGRICULTURA VERTICAL</div>
+                    <div class="bottomleft">VERTICAL FARMING</div>
                 </div>
             </mat-grid-tile>
         </mat-grid-list>
@@ -52,106 +60,113 @@
    
     <div class="second-block">
         <h1 class="title">
-            Hidroponia en Casa
+            Hydroponics at Home
         </h1>
-        
+        <div class="card-container">
+            <mat-card *ngFor="let allcourse of Allcourses; let i = index">
+                <ng-container *ngIf="i < 3">
+                    <div class="box" >
+                    
+                        <mat-card-header>
+                            <img [src]="allcourse.image" alt="{{allcourse.name}}">
+                        </mat-card-header>
+                        <mat-card-content>
+                            <div class="image-text" >
+                                <h2>{{allcourse.name}}</h2>
+                                <ul>
+                                    <li>Duration: {{allcourse.duration}} weeks </li>
+                                    <li> Description: {{allcourse.description}}</li>
+                                </ul>
+                            </div>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button class="matBtn">$ {{ allcourse.price }}</button>
+                            <button mat-button class="matBtn">{{ allcourse.rating }} ⭐</button>
+                        </mat-card-actions>
+    
+                    
+                    </div>
+                </ng-container>
+    
+            </mat-card>
 
-        <mat-grid-list cols="3" rowHeight="500px" gutterSize="100px" [cols]="breakpoint" (window:resize)="onResize($event)">
-            <mat-grid-tile>
-                <div class="box">
-                    <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154875356214472794/pexels-dima-valkov-6211621_2.png?ex=650f48fd&is=650df77d&hm=141f265edc16071b62c4f26c6b16f723814dab71def063e9b02a93770b397530&" alt="Hidroponia">
-                    <div class="image-text" >
-                        <h2>Microcurso 1: Fundamentos de la Hidroponía en Casa</h2>
-                    <ul>
-                        <li>Duración: 1 semana</li>
-                        <li> Descripción: Aprende los conceptos básicos de la hidroponía en casa, incluyendo sistemas de cultivo, selección de plantas y nutrientes esenciales.</li>
-                    </ul>
-                 
-                    </div>
-                    
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="box">
-                    <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154875355967004795/pexels-dima-valkov-6211616_1_3.png?ex=650f48fd&is=650df77d&hm=87c0a406560ca64c75681f3be56402acac3f7b86aea95ecf3bf16f737867185a&" alt="Agronegocios">
-                    <div class="image-text">
-                        <h2>Microcurso 2: Construcción de un Sistema Hidropónico Casero</h2>
-                        <ul>
-                            <li>Duración: 2 semanas</li>
-                            <li> Descripción: Paso a paso, crea tu propio sistema hidropónico en casa utilizando materiales asequibles. Incluye tutoriales prácticos.</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="box">
-                    <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154875356520648795/pexels-dima-valkov-6503007_4.png?ex=650f48fd&is=650df77d&hm=d6d9379fc82381dd224fe78264f12a12a522f06ce6949a78123f91c3f4f38967&" alt="Horticultura">
-                    <div class="image-text">
-                        <h2>Microcurso 3: Mantenimiento y Solución de Problemas en Hidroponía</h2>
-                        <ul>
-                            <li>Duración: 1 semana</li>
-                            <li>Descripción: Aprende a cuidar y mantener tu jardín hidropónico. Identifica y soluciona problemas comunes para un cultivo exitoso.</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+        </div>
+        
     </div>
 
-    <div class="second-block">
+    <div class="trhith-block">
         <h1 class="title">
-            Cultivo de Plantas Medicinales en Interiores
+            Growing medicinal plants indoors
         </h1>
-        
+        <div class="card-container-2">
+            <mat-card *ngFor="let allcourse of Allcourses" class="container-2">
+                <ng-container *ngIf="allcourse.id > 3 && allcourse.id < 10">
+                    <div class="box" >
+                    
+                        <mat-card-header>
+                            <img [src]="allcourse.image" alt="{{allcourse.name}}">
+                        </mat-card-header>
+                        <mat-card-content>
+                            <div class="image-text" >
+                                <h2>{{allcourse.name}}</h2>
+                                <ul>
+                                    <li>Duration: {{allcourse.duration}} weeks </li>
+                                    <li> Description: {{allcourse.description}}</li>
+                                </ul>
+                            </div>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button class="matBtn">$ {{ allcourse.price }}</button>
+                            <button mat-button class="matBtn">{{ allcourse.rating }} ⭐</button>
+                        </mat-card-actions>
+    
+                    
+                    </div>
+                </ng-container>
+    
+            </mat-card>
 
-        <mat-grid-list cols="3" rowHeight="500px" gutterSize="100px"  [cols]="breakpoint" (window:resize)="onResize($event)">
-            <mat-grid-tile>
-                <div class="box">
-                    <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154875356214472794/pexels-dima-valkov-6211621_2.png?ex=650f48fd&is=650df77d&hm=141f265edc16071b62c4f26c6b16f723814dab71def063e9b02a93770b397530&" alt="Hidroponia">
-                    <div class="image-text">
-                        <h2>Microcurso 1: Fundamentos de la Hidroponía en Casa</h2>
-                    <ul>
-                        <li>Duración: 1 semana</li>
-                        <li> Descripción: Aprende los conceptos básicos de la hidroponía en casa, incluyendo sistemas de cultivo, selección de plantas y nutrientes esenciales.</li>
-                    </ul>
-                 
-                    </div>
-                    
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="box">
-                    <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154875355967004795/pexels-dima-valkov-6211616_1_3.png?ex=650f48fd&is=650df77d&hm=87c0a406560ca64c75681f3be56402acac3f7b86aea95ecf3bf16f737867185a&" alt="Agronegocios">
-                    <div class="image-text">
-                        <h2>Microcurso 2: Construcción de un Sistema Hidropónico Casero</h2>
-                        <ul>
-                            <li>Duración: 2 semanas</li>
-                            <li> Descripción: Paso a paso, crea tu propio sistema hidropónico en casa utilizando materiales asequibles. Incluye tutoriales prácticos.</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="box">
-                    <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154875356520648795/pexels-dima-valkov-6503007_4.png?ex=650f48fd&is=650df77d&hm=d6d9379fc82381dd224fe78264f12a12a522f06ce6949a78123f91c3f4f38967&" alt="Horticultura">
-                    <div class="image-text">
-                        <h2>Microcurso 3: Mantenimiento y Solución de Problemas en Hidroponía</h2>
-                        <ul>
-                            <li>Duración: 1 semana</li>
-                            <li>Descripción: Aprende a cuidar y mantener tu jardín hidropónico. Identifica y soluciona problemas comunes para un cultivo exitoso.</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+        </div>
+        
     </div>
-    <div class="icons">
-        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_left"></mat-icon>
-        <mat-icon class="icon-right" aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_right"></mat-icon>
+
+    <div class="trhith-block">
+        <h1 class="title">
+            New Courses
+        </h1>
+        <div class="card-container-3">
+            <mat-card *ngFor="let allcourse of Allcourses" class="container-3">
+                <ng-container *ngIf="allcourse.id > 9">
+                    <div class="box" >
+                    
+                        <mat-card-header>
+                            <img [src]="allcourse.image" alt="{{allcourse.name}}">
+                        </mat-card-header>
+                        <mat-card-content>
+                            <div class="image-text" >
+                                <h2>{{allcourse.name}}</h2>
+                                <ul>
+                                    <li>Duration: {{allcourse.duration}} weeks </li>
+                                    <li> Description: {{allcourse.description}}</li>
+                                </ul>
+                            </div>
+                        </mat-card-content>
+                        <mat-card-content>
+                            <p>{{allcourse.dateCreated | date}}</p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button class="matBtn">{{ allcourse.price | currency}}</button>
+                            <button mat-button class="matBtn">{{ allcourse.rating }} ⭐</button>
+                        </mat-card-actions>
+    
+                    
+                    </div>
+                </ng-container>
+    
+            </mat-card>
+
+        </div>
+        
     </div>
     
 </section>
