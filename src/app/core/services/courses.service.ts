@@ -7,7 +7,7 @@ import { DataModel } from '../models/data.model';
     providedIn: 'root'
 })
 export class CoursesService {
-    baseUrl = 'http://localhost:8000/Allcourses';
+    baseUrl = 'http://localhost:3000/Allcourses';
 
     constructor(private http: HttpClient) { }
 

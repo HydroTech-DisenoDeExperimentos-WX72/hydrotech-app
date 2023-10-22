@@ -71,9 +71,9 @@
 }
 .card-container-2{
     display: flex;
-
+    margin-left: 50px;
     gap: 50px;
-    width: 100%;
+    width: 105%;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -124,6 +124,20 @@ h2{
     font-weight: 600;
     line-height: normal;
     
+}
+
+mat-card-content p{
+    color: #373737;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card-container-3{
+    align-items: center;
+    justify-content: center;
 }
 
 li{

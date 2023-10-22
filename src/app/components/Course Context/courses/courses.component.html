@@ -149,11 +149,11 @@
                                     <li>Duration: {{allcourse.duration}} weeks </li>
                                     <li> Description: {{allcourse.description}}</li>
                                 </ul>
+                                <p>Created At: {{allcourse.dateCreated | date}}</p>
                             </div>
+                            
                         </mat-card-content>
-                        <mat-card-content>
-                            <p>{{allcourse.dateCreated | date}}</p>
-                        </mat-card-content>
+                     
                         <mat-card-actions>
                             <button mat-button class="matBtn">{{ allcourse.price | currency}}</button>
                             <button mat-button class="matBtn">{{ allcourse.rating }} ⭐</button>
