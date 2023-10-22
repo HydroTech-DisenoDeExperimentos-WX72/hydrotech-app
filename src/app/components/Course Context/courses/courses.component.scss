@@ -11,6 +11,12 @@
    
 }
 
+.top h1{
+    float: left;
+}
+.top button{
+    margin-left: 40%;
+}
 .first-block{
     margin: 0 auto;
 }
@@ -49,13 +55,57 @@
     width: 425px;
 }
 
-.second-block{
+.card-container{
   
-    margin-bottom: 100px;
-    margin-top: 150px;
-    margin-right: 50px;
+  
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-left: 50px;
 
 }
+.card-container-2{
+    display: flex;
+
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    overflow-x: auto;
+
+}
+.card-container-2::-webkit-scrollbar{
+    width: 0;
+}
+
+.card-container-3{
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    overflow-x: auto;
+}
+
+.card-container-3::-webkit-scrollbar{
+    width: 0;
+}
+
+
+.matBtn{
+    width: 50%;
+}
+
+
 
 .box{
     transition: box-shadow 0.3s ease;
@@ -69,7 +119,6 @@
 
 h2{
     color: #373737;
-    font-family: Poppins;
     font-size: 22px;
     font-style: normal;
     font-weight: 600;
@@ -79,7 +128,6 @@ h2{
 
 li{
     color: #000;
-    font-family: Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

@@ -24,6 +24,17 @@ import { ComunnityComponent } from './components/Community Context/comunnity/com
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
+
+import { AddCourseComponent } from './components/Course Context/add-course/add-course.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     CoursesComponent,
     ArticlesComponent,
     ComunnityComponent,
+    AddCourseComponent,
     
   ],
   imports: [
@@ -52,7 +64,17 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatDividerModule,
     MatChipsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSnackBarModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

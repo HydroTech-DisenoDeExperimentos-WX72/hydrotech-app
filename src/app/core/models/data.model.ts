@@ -5,4 +5,7 @@ export interface DataModel {
     description: any;
     price: any;
     rating: any;
+    duration: any;
+    dateCreated:any;
+   
 }
