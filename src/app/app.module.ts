@@ -35,6 +35,8 @@ import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AddCourseComponent } from './components/Course Context/add-course/add-course.component';
+import { PaymentComponent } from './components/Shared/payment/payment.component';
+
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { AddCourseComponent } from './components/Course Context/add-course/add-c
     ArticlesComponent,
     ComunnityComponent,
     AddCourseComponent,
+    PaymentComponent,
     
   ],
   imports: [
