@@ -46,4 +46,16 @@ export class HomeComponent {
       .subscribe((courses) => (this.courses = courses));
   }
 
+  redirectToPayment(curso: any) {
+    this._router.navigate(['/payment'], {
+        queryParams: {
+            id: curso.id, // Suponiendo que cada curso tiene un identificador único 'id'
+            image: curso.image,
+            name: curso.name,
+            price: curso.price
+            // Agrega otros datos del curso que desees enviar al componente de pago
+        }
+    });
+}
+
 }

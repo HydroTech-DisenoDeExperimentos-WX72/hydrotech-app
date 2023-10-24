@@ -44,7 +44,7 @@
               <p>{{ curso.description }}</p>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-button class="matBtn">$ {{ curso.price }}</button>
+              <button mat-button class="matBtn" (click)="redirectToPayment(curso)">$ {{ curso.price }}</button>
               <button mat-button class="matBtn">{{ curso.rating }} ⭐</button>
             </mat-card-actions>
           </mat-card>

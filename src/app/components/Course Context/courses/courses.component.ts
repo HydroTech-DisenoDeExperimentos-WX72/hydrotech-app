@@ -10,6 +10,7 @@ import { DataModel } from 'src/app/core/models/data.model';
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss']
 })
+
 export class CoursesComponent implements OnInit {
   breakpoint: number = 0;
   Allcourses: any[] = []
@@ -36,6 +37,17 @@ getAllCourses(){
   this._coursesService.getListCourses().subscribe((data: any)=>{
     this.Allcourses = data;
   })
+}
+redirectToPayment(curso: any) {
+  this.router.navigate(['/payment'], {
+      queryParams: {
+          id: curso.id, // Suponiendo que cada curso tiene un identificador único 'id'
+          image: curso.image,
+          name: curso.name,
+          price: curso.price
+          // Agrega otros datos del curso que desees enviar al componente de pago
+      }
+  });
 }
 }
 

@@ -80,7 +80,7 @@
                             </div>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-button class="matBtn">$ {{ allcourse.price }}</button>
+                            <button mat-button class="matBtn" (click)="redirectToPayment(allcourse)">$ {{ allcourse.price }}</button>
                             <button mat-button class="matBtn">{{ allcourse.rating }} ⭐</button>
                         </mat-card-actions>
     
@@ -116,7 +116,7 @@
                             </div>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button mat-button class="matBtn">$ {{ allcourse.price }}</button>
+                            <button mat-button class="matBtn" (click)="redirectToPayment(allcourse)">${{allcourse.price }}</button>
                             <button mat-button class="matBtn">{{ allcourse.rating }} ⭐</button>
                         </mat-card-actions>
     
@@ -155,7 +155,7 @@
                         </mat-card-content>
                      
                         <mat-card-actions>
-                            <button mat-button class="matBtn">{{ allcourse.price | currency}}</button>
+                            <button mat-button class="matBtn" (click)="redirectToPayment(allcourse)">{{ allcourse.price | currency}}</button>
                             <button mat-button class="matBtn">{{ allcourse.rating }} ⭐</button>
                         </mat-card-actions>
     
