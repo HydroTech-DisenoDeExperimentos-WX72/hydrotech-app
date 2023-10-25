@@ -19,171 +19,45 @@
       </div>
     </section>
 
-    <!--Destacados-->
+    <!--Cursos-->
+
+    <br>
+    <br>
 
     <section class="destacados">
       <div class="containerC">
-          <div class="boxC col3">
-              <h1><br><br>Más Destacados</h1>
-          </div>
-          <div>
-            <p id="txtDestacados">
-              ¡Cultiva tu conocimiento con los cursos estrella de GreenGrow 
-              y haz crecer tu pasión por la agricultura!
-            </p>
-          </div>
-          <div class="mat-card-cvr">
-            <mat-card class="card">
-                <mat-card-header>
-                  <mat-card-title>Fundamentos de la Hidroponía</mat-card-title>
-                </mat-card-header>
-                <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1155527206471204874/curso1.png" alt="Curso1">
-                <mat-card-content>
-                  <p>
-                    Aprende de la mano de los expertos los fundamentos de la hidroponía y 
-                    cómo puedes aplicarlos en tu propio huerto.
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button class="matBtn">$0.00</button>
-                  <button mat-button class="matBtn">5.0 ⭐</button>
-                </mat-card-actions>
-            </mat-card>
-            <mat-card class="card">
-                <mat-card-header>
-                  <mat-card-title>Cultivo Avanzado en Interiores</mat-card-title>
-                </mat-card-header>
-                <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1155527206865485945/curso2.png" alt="Curso2">
-                <mat-card-content>
-                  <p>
-                    Curso avanzado de cultivo en interiores. Aprende a cultivar tus propios alimentos 
-                    en casa con las técnicas más avanzadas.
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button class="matBtn">$62.99</button>
-                  <button mat-button class="matBtn">4.9 ⭐</button>
-                </mat-card-actions>
-            </mat-card>
-            <mat-card class="card">
-                <mat-card-header>
-                  <mat-card-title>Sostenibilidad en la Agricultura Urbana</mat-card-title>
-                </mat-card-header>
-                <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1155527207159078922/curso3.png" alt="Curso3">
-                <mat-card-content>
-                  <p>
-                    Explora prácticas agrícolas y estrategias de cultivo que promueven la 
-                    coexistencia armoniosa entre la agricultura y las ciudades, abordando 
-                    los desafíos de la seguridad alimentaria.
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button class="matBtn">$49.99</button>
-                  <button mat-button class="matBtn">5.0 ⭐</button>
-                </mat-card-actions>
-            </mat-card>
-            <div>
-              <br><br>
-              <button mat-raised-button class="linkBtn" href="/cursos" target="_blank">Ver Todo 🡢</button>
-            </div>
-          </div>
+        <div class="boxC col3">
+          <h1>Más Destacados</h1>
+        </div>
+        <div>
+          <p id="txtDestacados">
+            ¡Cultiva tu conocimiento con los cursos estrella de GreenGrow y haz crecer tu pasión por la agricultura!
+          </p>
+        </div>
+        <div class="mat-card-cvr">
+          <mat-card class="card" *ngFor="let curso of courses">
+            <mat-card-header>
+              <mat-card-title>{{ curso.name }}</mat-card-title>
+            </mat-card-header>
+            <img [src]="curso.image" alt="{{ curso.name }}">
+            <mat-card-content>
+              <p>{{ curso.description }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="matBtn" (click)="redirectToPayment(curso)">$ {{ curso.price }}</button>
+              <button mat-button class="matBtn">{{ curso.rating }} ⭐</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <br><br>
+        <div class="text-center">
+          <br><br>
+          <a mat-raised-button href="/courses" target="_blank">Ver Todo 🡢</a>
+        </div>
       </div>
-    </section>
+    </section>   
 
     
-
-    <!--Otros Productos-->
-
-    <section>
-      <div class="containerD">
-        <div class="boxC col3">
-          <h1><br><br><br>Otros Productos</h1>
-        </div>
-
-        <div class="mat-card-cvr">
-
-          <mat-card class="card">
-            <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1155527207503003748/curso4.png" alt="Curso4">
-            <mat-card-header>
-              <mat-card-title>Hidroponía en casa</mat-card-title>
-            </mat-card-header>
-            <mat-card-actions>
-              <button mat-button class="matBtn">$48.99</button>
-              <button mat-button class="matBtn">5.0 ⭐</button>
-            </mat-card-actions>
-          </mat-card>
-          
-
-          <mat-card class="card">
-            <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1155527207905673297/curso5.png" alt="Curso5">
-            <mat-card-header>
-              <mat-card-title>Cultivo Orgánico</mat-card-title>
-            </mat-card-header>
-            <mat-card-actions>
-              <button mat-button class="matBtn">$39.00</button>
-              <button mat-button class="matBtn">4.9 ⭐</button>
-            </mat-card-actions>
-          </mat-card>
-        
-        </div>
-
-        <div class="mat-card-cvr">
-          
-          <mat-card class="card">
-            <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1155527205720432761/curso6.png" alt="Curso6">
-            <mat-card-header>
-              <mat-card-title>Nutrición de Plantas</mat-card-title>
-            </mat-card-header>
-            <mat-card-actions>
-              <button mat-button class="matBtn">$42.99</button>
-              <button mat-button class="matBtn">4.8 ⭐</button>
-            </mat-card-actions>
-          </mat-card>
-          
-
-          <mat-card class="card">
-            <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1155527243091693699/curso7.png" alt="Curso7">
-            <mat-card-header>
-              <mat-card-title>Agricultura Vertical</mat-card-title>
-            </mat-card-header>
-            <mat-card-actions>
-              <button mat-button class="matBtn">$32.99</button>
-              <button mat-button class="matBtn">4.7 ⭐</button>
-            </mat-card-actions>
-          </mat-card>
-        
-        </div>
-
-        <div class="mat-card-cvr">
-          
-          <mat-card class="card">
-            <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1155527243595006024/curso8.png" alt="Curso8">
-            <mat-card-header>
-              <mat-card-title>Jardinería Interior</mat-card-title>
-            </mat-card-header>
-            <mat-card-actions>
-              <button mat-button class="matBtn">$39.99</button>
-              <button mat-button class="matBtn">5.0 ⭐</button>
-            </mat-card-actions>
-          </mat-card>
-          
-
-          <mat-card class="card">
-            <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1155527243972497478/curso9.png" alt="Curso9">
-            <mat-card-header>
-              <mat-card-title>Hierbas Frescas</mat-card-title>
-            </mat-card-header>
-            <mat-card-actions>
-              <button mat-button class="matBtn">$39.95</button>
-              <button mat-button class="matBtn">4.7 ⭐</button>
-            </mat-card-actions>
-          </mat-card>
-        
-        </div>
-
-      </div>
-    </section>
-
     <!--Oferta-->
 
     <section class="oferta">
@@ -207,8 +81,4 @@
 
       </div>
     </section>
-
-
-
-
 </div>

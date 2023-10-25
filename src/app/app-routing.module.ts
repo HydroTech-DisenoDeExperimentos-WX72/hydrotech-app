@@ -6,6 +6,9 @@ import  LogInComponent  from './components/Login Context/log-in/log-in.component
 import  SignUpComponent  from './components/SignUp Context/sign-up/sign-up.component'; // Add this
 import { ArticlesComponent } from './components/Educational Content Context/articles/articles.component';
 import { ComunnityComponent } from './components/Community Context/comunnity/comunnity.component';
+import { PaymentComponent } from './components/Shared/payment/payment.component';
+import { CreatepostComponent } from './components/CreatePost/createpost/createpost.component';
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'courses', component: CoursesComponent },
@@ -13,6 +16,8 @@ const routes: Routes = [
   { path: 'signup', component: SignUpComponent },
   { path: 'articles', component: ArticlesComponent },
   { path: 'comunnity', component: ComunnityComponent },
+  { path: 'createpost', component: CreatepostComponent },
+  { path: 'payment', component: PaymentComponent }, // Agrega esta ruta para el componente de pago
   { path: '', pathMatch: 'full', redirectTo: 'home'},
   { path: '**', pathMatch: 'full', redirectTo: 'home'},
  
