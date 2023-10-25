@@ -14,10 +14,9 @@
       <div class="trending">
         <div class="trending-content">
           <h3>Temas Populares</h3>
-          <p>Oportunidades de Negocios en Ferias Agrícolas</p>
-          <p>Iniciando en la Hidroponía: Consejos para Principiantes</p>
-          <p>Iniciando en la Hidroponía: Consejos para Principiantes</p>
-          <p>Iniciando en la Hidroponía: Consejos para Principiantes</p>
+          <div *ngFor="let trend of trends">
+            <p>{{ trend }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -35,89 +34,43 @@
   </mat-toolbar>
 -->
 
-  <!--Barra de busqueda-->
   <div fxFlex.xs="100" fxFlex.gt-sm="60">
     <div class="search-bar">
-      <input
-        type="text"
-        placeholder="Compartamos lo que pasa por tu mente..."
-        name="input-post"
-      />
-      <button>Crear Post</button>
+      <div>Compartamos lo que pasa por tu mente...</div>
+      <button routerLink="/createpost">Crear Post</button>
     </div>
+
     <div class="posts">
-      <!-- Post 1 -->
-      <div class="post-header">
-        <h3>Eventos y ferias agrícolas</h3>
-      </div>
-      <div class="post">
-        <div class="post-content">
-          <img src="https://media.discordapp.net/attachments/1148057148522233868/1154875356520648795/pexels-dima-valkov-6503007_4.png" alt="Imagen del Post" />
-          <div class="post-details">
-            <h4>Oportunidades de Negocios en Ferias Agrícolas</h4>
-            <div class="tags">
-              <span>Etiqueta 1</span>
-              <span>Etiqueta 2</span>
-              <!-- Agrega más etiquetas aquí -->
-            </div>
-            <p>Arturo Vidal</p>
-            <p class="post-date">2 weeks ago</p>
-            <div class="interaction">
-              <i class="fa fa-heart" aria-hidden="true"></i>
-              <!-- Ícono de corazón -->
-            </div>
-            <div class="post-stats">
-              <span>Views: 100</span>
-              <span>Likes: 50</span>
-              <span>Comments: 30</span>
+      <div *ngFor="let post of posts">
+        <div class="post-header">
+          <h3>Eventos y ferias agrícolas</h3>
+        </div>
+        <div class="post">
+          <div class="post-content">
+            <img [src]="post.image" alt="Imagen del Post" />
+            <div class="post-details">
+              <h4>{{ post.title }}</h4>
+              <div class="tags">
+                <span *ngFor="let tag of post.tags">{{ tag }}</span>
+              </div>
+              <div class="post-description">
+                <p>{{ post.description }}</p>
+              </div>
+              <p>{{ post.author }}</p>
+              <p class="post-date">{{ post.date }}</p>
+              <div class="interaction">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+              <div class="post-stats">
+                <span>Views: {{ post.views }}</span>
+                <span>Likes: {{ post.likes }}</span>
+                <span>Comments: {{ post.comments }}</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Agrega más posts aquí si es necesario -->
     </div>
-
-    <div class="posts">
-      <!-- Post 1 -->
-      <div class="post-header">
-        <h3>Eventos y ferias agrícolas</h3>
-      </div>
-      <div class="post">
-        <div class="post-content">
-          <img src="https://media.discordapp.net/attachments/1148057148522233868/1154875355967004795/pexels-dima-valkov-6211616_1_3.png" alt="Imagen del Post" />
-          <div class="post-details">
-            <h4>Oportunidades de Negocios en Ferias Agrícolas</h4>
-            <div class="tags">
-              <span>Etiqueta 1</span>
-              <span>Etiqueta 2</span>
-              <!-- Agrega más etiquetas aquí -->
-            </div>
-            <p>Lionel Messi</p>
-            <p class="post-date">1 weeks ago</p>
-            <div class="interaction">
-              <i class="fa fa-heart" aria-hidden="true"></i>
-              <!-- Ícono de corazón -->
-            </div>
-            <div class="post-stats">
-              <span>Views: 10000</span>
-              <span>Likes: 5000</span>
-              <span>Comments: 300</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Agrega más posts aquí si es necesario -->
-    </div>
-
-    <!-- Paginador 
-      <mat-paginator
-        [length]="4"
-        [pageSize]="4"
-        [pageSizeOptions]="[5, 10, 20]"
-      ></mat-paginator>
-    -->
   </div>
   <!-- Sección de posts -->
 

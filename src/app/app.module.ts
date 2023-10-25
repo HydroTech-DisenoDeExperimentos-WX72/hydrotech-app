@@ -33,9 +33,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AddCourseComponent } from './components/Course Context/add-course/add-course.component';
 import { PaymentComponent } from './components/Shared/payment/payment.component';
+import { CreatepostComponent } from './components/CreatePost/createpost/createpost.component';
 
 
 @NgModule({
@@ -48,6 +50,7 @@ import { PaymentComponent } from './components/Shared/payment/payment.component'
     ComunnityComponent,
     AddCourseComponent,
     PaymentComponent,
+    CreatepostComponent,
     
   ],
   imports: [
@@ -62,6 +65,7 @@ import { PaymentComponent } from './components/Shared/payment/payment.component'
     MatIconModule,
     MatGridListModule,
     MatPaginatorModule,
+    ToastrModule.forRoot(),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     MatListModule,
