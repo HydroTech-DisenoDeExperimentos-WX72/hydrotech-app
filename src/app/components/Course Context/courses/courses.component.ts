@@ -13,7 +13,8 @@ import { DataModel } from 'src/app/core/models/data.model';
 
 export class CoursesComponent implements OnInit {
   breakpoint: number = 0;
-  Allcourses: any[] = []
+  Allcourses: any[] = [];
+  filteredCourses: any[] = [];
 
 
   
@@ -21,13 +22,10 @@ export class CoursesComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.breakpoint = (window.innerWidth <= 1500) ? 1 : 3;
+
     this.getAllCourses();
 }
   
-onResize(event:any) {
-  this.breakpoint = (event.target.innerWidth <= 1500) ? 1 : 3;
-}
 openAddCourse() {
   this._dialog.open(AddCourseComponent);
 }
@@ -36,6 +34,10 @@ openAddCourse() {
 getAllCourses(){
   this._coursesService.getListCourses().subscribe((data: any)=>{
     this.Allcourses = data;
+    //visualizetheAllcoursesIdinConsoleLog
+    console.log(this.Allcourses);
+    // En tu componente
+    this.filteredCourses = this.Allcourses.filter(course => course.id > 3 && course.id <= 9);
   })
 }
 redirectToPayment(curso: any) {

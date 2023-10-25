@@ -20,38 +20,29 @@
         <br>
         
 
-        <mat-grid-list [cols]="breakpoint" cols="3" rowHeight="4:2" (window:resize)="onResize($event)">
-            <mat-grid-tile rowspan="2">
-            <div class="box">
-                <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154970255370760252/Rectangle_1135.png" alt="Hidroponia">
+        <section class="container2">
+            <div class="box-large">
+                <img src="https://media.discordapp.net/attachments/1148057148522233868/1166810267506708602/Rectangle_11351.png?ex=654bd7be&is=653962be&hm=47c3576d7e00c020419ee1f725739636f44a7e592055f22789cd78075013d01c&=&width=367&height=450" alt="Hidroponia">
                 <div class="topleft">HYDROPONICS</div>
             </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="box">
-                    <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154970255639191602/Rectangle_1136.png" alt="Agronegocios">
-                    <div class="bottomleft">AGRIBUSINESS</div>
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="box">
-                    <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154970255945367613/Rectangle_1137.png" alt="Horticultura">
-                    <div class="bottomleft">HORTICULTURE</div>
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="box">
-                    <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154970256775848026/Rectangle_1139.png" alt="Riego">
-                    <div class="bottomleft">IRRIGATION</div>
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div class="box">
-                    <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154970256213815389/Rectangle_1138.png" alt="Agricultura Vertical">
-                    <div class="bottomleft">VERTICAL FARMING</div>
-                </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            <div class="box1">
+                <img src="https://media.discordapp.net/attachments/1148057148522233868/1166810267213119558/Rectangle_11361.png?ex=654bd7bd&is=653962bd&hm=4a49ee6a2133d922e137d270ebbe1966bc3f141b944910168c2074830ee78f65&=" alt="Agronegocios">
+                <div class="bottomleft">AGRIBUSINESS</div>
+            </div>
+            <div class="box1">
+                <img src="https://media.discordapp.net/attachments/1148057148522233868/1166810266944688168/Rectangle_11371.png?ex=654bd7bd&is=653962bd&hm=2a86a4515d53a6f831ab3710a419251f9663e517a99f581cfdc94343751db304&=" alt="Horticultura">
+                <div class="bottomleft">HORTICULTURE</div>
+            </div>
+            <div class="box1">
+                <img src="https://media.discordapp.net/attachments/1148057148522233868/1166810266659471380/Rectangle_11391.png?ex=654bd7bd&is=653962bd&hm=6ca77347d82025bafd1b990cd3aac692c8ecb02d271d4cf9c77e38c874e93f43&=" alt="Riego">
+                <div class="bottomleft">IRRIGATION</div>
+            </div>
+            <div class="box1">
+                <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1166810547023515658/Rectangle_11381.png?ex=654bd800&is=65396300&hm=dcaf67d3dc99db728fc1db5da890999c9083612c6192a7fecde3f5f7ba778282&" alt="Agricultura Vertical">
+                <div class="bottomleft">VERTICAL FARMING</div>
+            </div>
+        </section>
+        
     </div>
     <div class="icons">
         <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_left"></mat-icon>
@@ -99,8 +90,8 @@
             Growing medicinal plants indoors
         </h1>
         <div class="card-container-2">
-            <mat-card *ngFor="let allcourse of Allcourses" class="container-2">
-                <ng-container *ngIf="allcourse.id > 3 && allcourse.id < 10">
+            <mat-card *ngFor="let allcourse of filteredCourses" class="container-2">
+                
                     <div class="box" >
                     
                         <mat-card-header>
@@ -122,7 +113,7 @@
     
                     
                     </div>
-                </ng-container>
+                
     
             </mat-card>
 
