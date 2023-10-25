@@ -11,7 +11,7 @@ import { DataModel } from '../models/data.model';
   providedIn: 'root',
 })
 export class DbService {
-  baseUrl = 'http://localhost:3000';
+  baseUrl = 'https://my-json-server.typicode.com/PaoloCh/jsonServer';
 
   constructor(private http: HttpClient) {}
 
