@@ -14,7 +14,9 @@ import { DataModel } from 'src/app/core/models/data.model';
 export class CoursesComponent implements OnInit {
   breakpoint: number = 0;
   Allcourses: any[] = [];
-  filteredCourses: any[] = [];
+  filteredCoursesbyCategory1: any[] = [];
+  filteredCoursesbyCategory2: any[] = [];
+  filteredCoursesbyCategory3: any[] = [];
 
 
   
@@ -37,7 +39,9 @@ getAllCourses(){
     //visualizetheAllcoursesIdinConsoleLog
     console.log(this.Allcourses);
     // En tu componente
-    this.filteredCourses = this.Allcourses.filter(course => course.id > 3 && course.id <= 9);
+    this.filteredCoursesbyCategory1 = this.Allcourses.filter(course => course.category == 'HydroponicsAtHome');
+    this.filteredCoursesbyCategory2 = this.Allcourses.filter(course => course.category == 'GrowingPlants');
+    this.filteredCoursesbyCategory3 = this.Allcourses.filter(course => course.category == 'NewCourses');
   })
 }
 redirectToPayment(curso: any) {

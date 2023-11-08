@@ -54,8 +54,8 @@
             Hydroponics at Home
         </h1>
         <div class="card-container">
-            <mat-card *ngFor="let allcourse of Allcourses; let i = index">
-                <ng-container *ngIf="i < 3">
+            <mat-card *ngFor="let allcourse of filteredCoursesbyCategory1">
+            
                     <div class="box" >
                     
                         <mat-card-header>
@@ -68,6 +68,7 @@
                                     <li>Duration: {{allcourse.duration}} weeks </li>
                                     <li> Description: {{allcourse.description}}</li>
                                 </ul>
+                                
                             </div>
                         </mat-card-content>
                         <mat-card-actions>
@@ -77,7 +78,7 @@
     
                     
                     </div>
-                </ng-container>
+                
     
             </mat-card>
 
@@ -90,7 +91,7 @@
             Growing medicinal plants indoors
         </h1>
         <div class="card-container-2">
-            <mat-card *ngFor="let allcourse of filteredCourses" class="container-2">
+            <mat-card *ngFor="let allcourse of filteredCoursesbyCategory2" class="container-2">
                 
                     <div class="box" >
                     
@@ -126,8 +127,8 @@
             New Courses
         </h1>
         <div class="card-container-3">
-            <mat-card *ngFor="let allcourse of Allcourses" class="container-3">
-                <ng-container *ngIf="allcourse.id > 9">
+            <mat-card *ngFor="let allcourse of filteredCoursesbyCategory3" class="container-3">
+               
                     <div class="box" >
                     
                         <mat-card-header>
@@ -140,7 +141,8 @@
                                     <li>Duration: {{allcourse.duration}} weeks </li>
                                     <li> Description: {{allcourse.description}}</li>
                                 </ul>
-                                <p>Created At: {{allcourse.dateCreated | date}}</p>
+                                <!-- <p>Created At: {{allcourse.dateCreated | date}}</p> -->
+                             
                             </div>
                             
                         </mat-card-content>
@@ -152,7 +154,7 @@
     
                     
                     </div>
-                </ng-container>
+           
     
             </mat-card>
 
