@@ -6,6 +6,7 @@ export interface DataModel {
     price: any;
     rating: any;
     duration: any;
-    dateCreated:any;
+    category: any;
+    date:any;
    
 }

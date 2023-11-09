@@ -7,7 +7,7 @@ import { DataModel } from '../models/data.model';
     providedIn: 'root'
 })
 export class CoursesService {
-    baseUrl = 'https://my-json-server.typicode.com/PaoloCh/jsonServer/Allcourses';
+    baseUrl = 'http://localhost:3000/Allcourses';
 
     constructor(private http: HttpClient) { }
 
