@@ -1,0 +1,14 @@
+<br>
+<br>
+<br>
+<div *ngIf="user">
+    <h2>Perfil de {{ user.displayName }}</h2>
+    <img [src]="userPhotoURL" alt="Foto de perfil" (error)="userPhotoURL = 'https://i.imgur.com/eJtTmKu.png'">
+    <p>Correo Electrónico: {{ user.email }}</p>
+    <p>Nombre: {{user.displayName}}</p>
+    
+    <!-- Otras propiedades del usuario que desees mostrar -->
+    <button (click)="logout()">Cerrar Sesión</button>&nbsp;
+  </div>
+  
+  
