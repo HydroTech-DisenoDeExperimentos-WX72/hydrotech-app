@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { MediaObserver } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +9,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  user: any; // Asegúrate de tener una variable user para verificar la autenticación
 
-  constructor() { }
+  constructor(
+    private authService: AuthService, 
+    private router: Router,
+    public media: MediaObserver
+  ) {
+    this.authService.authState$.subscribe((user) => {
+      this.user = user;
+    });
+  }
 
-  ngOnInit(): void {}
-
+  navigateToProfile() {
+    this.router.navigate(['/profile']);
+  }
 }
