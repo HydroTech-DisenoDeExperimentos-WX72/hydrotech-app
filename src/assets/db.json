@@ -103,6 +103,27 @@
       "description": "Learn how to care for and maintain your hydroponic garden. Identify and solve common problems for successful cultivation.",
       "rating": 0,
       "id": 3
+    },
+    {
+      "name": "xddd",
+      "duration": "2",
+      "category": "HydroponicsAtHome",
+      "price": 5000,
+      "image": "https://somoskudasai.com/wp-content/uploads/2021/02/portada_senpai-ga-uzai-kouhai-3.jpg",
+      "description": "asx",
+      "rating": 0,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "xd",
+      "image": "https://somoskudasai.com/wp-content/uploads/2021/02/portada_senpai-ga-uzai-kouhai-3.jpg",
+      "description": "sdafdasdas",
+      "price": 1000,
+      "rating": 0,
+      "duration": "5",
+      "category": "GrowingPlants",
+      "date": "12/11/2023"
     }
   ],
   "posts": [
@@ -137,6 +158,30 @@
         "ferias",
         "negocios"
       ]
+    },
+    {
+      "title": "adas",
+      "description": "dasdasd",
+      "author": "dasd",
+      "image": "asdas",
+      "tags": [
+        "ads"
+      ],
+      "id": 3
+    },
+    {
+      "id": 4,
+      "title": "xdx",
+      "author": "xdx",
+      "date": "12/11/2023",
+      "image": "xdx",
+      "description": "dxd",
+      "tags": [
+        "xd"
+      ],
+      "likes": 0,
+      "comments": 0,
+      "views": 0
     }
   ],
   "trends": [

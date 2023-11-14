@@ -5,13 +5,13 @@ import {
   HttpErrorResponse,
   HttpHeaders,
 } from '@angular/common/http';
-import { DataModel } from '../models/data.model';
+import { PostModel } from '../models/post.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DbService {
-  baseUrl = 'https://my-json-server.typicode.com/PaoloCh/jsonServer';
+  baseUrl = 'https://greengrow.zeabur.app/api/green-grow/v1';
 
   constructor(private http: HttpClient) {}
 
@@ -41,7 +41,7 @@ export class DbService {
 
   //GET POSTS
   getPosts() {
-    return this.http.get<any[]>(this.baseUrl + '/posts');
+    return this.http.get<PostModel[]>(this.baseUrl + '/posts');
   }
 
   //GET TRENDS
@@ -50,7 +50,7 @@ export class DbService {
   }
 
   // POST POSTS
-  createPost(post: any) {
-    return this.http.post<any>(this.baseUrl + '/posts', post, this.httpOptions);
+  createPost(post: PostModel) {
+    return this.http.post<PostModel>(this.baseUrl + '/posts', post, this.httpOptions);
   }
 }
