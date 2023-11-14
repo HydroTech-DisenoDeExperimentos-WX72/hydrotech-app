@@ -1,4 +1,4 @@
-export interface DataModel {
+export interface CourseModel {
     id: any;
     name: any;
     image: any;
@@ -8,5 +8,4 @@ export interface DataModel {
     duration: any;
     category: any;
     date:any;
-   
 }

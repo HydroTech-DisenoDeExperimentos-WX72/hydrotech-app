@@ -3,7 +3,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { AddCourseComponent } from '../add-course/add-course.component';
 import { Router } from '@angular/router';
 import { CoursesService } from 'src/app/core/services/courses.service';
-import { DataModel } from 'src/app/core/models/data.model';
+import { CourseModel } from 'src/app/core/models/course.model';
 
 @Component({
   selector: 'app-courses',

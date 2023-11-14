@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { catchError, Observable, retry, throwError} from 'rxjs';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { DataModel } from '../models/data.model';
+import { CourseModel } from '../models/course.model';
 
 @Injectable({
     providedIn: 'root'
 })
 export class CoursesService {
-    baseUrl = 'http://localhost:3000/Allcourses';
+    baseUrl = 'https://greengrow.zeabur.app/api/green-grow/v1/courses';
 
     constructor(private http: HttpClient) { }
 
@@ -30,20 +30,20 @@ export class CoursesService {
     }
     
     //GET
-    getListCourses(): Observable<DataModel>{
-      return this.http.get<DataModel>(this.baseUrl)
+    getListCourses(): Observable<CourseModel>{
+      return this.http.get<CourseModel>(this.baseUrl)
       .pipe(retry(2),catchError(this.handleError))
     }
 
     //GetById
-    getCourseById(id: any): Observable<DataModel>{
-      return this.http.get<DataModel>(this.baseUrl + '/' + id)
+    getCourseById(id: any): Observable<CourseModel>{
+      return this.http.get<CourseModel>(this.baseUrl + '/' + id)
       .pipe(retry(2),catchError(this.handleError))
     }
 
     //Post
-    createCourse(data: DataModel): Observable<DataModel>{
-      return this.http.post<DataModel>(this.baseUrl, data, this.httpOptions)
+    createCourse(data: CourseModel): Observable<CourseModel>{
+      return this.http.post<CourseModel>(this.baseUrl, data, this.httpOptions)
       .pipe(retry(2),catchError(this.handleError))
     }
 }
