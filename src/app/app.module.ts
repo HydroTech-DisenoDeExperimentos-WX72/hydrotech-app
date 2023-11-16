@@ -39,9 +39,6 @@ import { AddCourseComponent } from './components/Course Context/add-course/add-c
 import { PaymentComponent } from './components/Shared/payment/payment.component';
 import { CreatepostComponent } from './components/CreatePost/createpost/createpost.component';
 
-import { ProfileComponent } from './components/Shared/profile/profile.component';
-import { CommonModule } from '@angular/common';
-import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -54,17 +51,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     AddCourseComponent,
     PaymentComponent,
     CreatepostComponent,
-    ProfileComponent,
     
   ],
   imports: [
     BrowserModule,
     FlexLayoutModule,
     AppRoutingModule,
-    MatSidenavModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    CommonModule,
     MatButtonModule,
     MatCardModule,
     HomeComponent,

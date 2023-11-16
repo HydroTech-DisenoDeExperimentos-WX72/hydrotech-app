@@ -8,7 +8,7 @@ import { DbService } from 'src/app/core/services/db.service';
 })
 export class ComunnityComponent {
   posts: any[] = [];
-  trends: any[] = [];
+  trends: string[] = [];
 
   constructor(private dbService: DbService) {}
 
@@ -24,13 +24,8 @@ export class ComunnityComponent {
   }
 
   getTrends() {
-    this.dbService.getTrends().subscribe(
-      (data: string[]) => {
-        this.trends = data;
-      },
-      (error) => {
-        console.error('Error fetching trends:', error);
-      }
-    );
+    this.dbService.getTrends().subscribe((data: any[]) => {
+      this.trends = data;
+    });
   }
 }

@@ -1,193 +1,81 @@
 {
-  "courses": [
+  "#tendencia": [
     {
       "id": 1,
-      "name": "Fundamentos de la Hidroponía",
-      "image": "https://cdn.discordapp.com/attachments/1148057148522233868/1155527206471204874/curso1.png",
-      "description": "Aprende de la mano de los expertos los fundamentos de la hidroponía y cómo puedes aplicarlos en tu propio huerto.",
-      "price": 0,
-      "rating": 5
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154633127466106940/imagen01.png?width=720&height=216",
+      "titulo": "LA DEFORESTACION INCREMENTO EN PANDEMIA",
+      "fecha": "2023-11-15",
+      "descripcion": "Durante la pandemia, la deforestación ha alcanzado niveles preocupantes en todo el mundo, destacando la necesidad urgente de prácticas agrícolas sostenibles y conservación forestal."
     },
     {
       "id": 2,
-      "name": "Cultivo Avanzado en Interiores",
-      "image": "https://cdn.discordapp.com/attachments/1148057148522233868/1155527206865485945/curso2.png",
-      "description": "Curso avanzado de cultivo en interiores. Aprende a cultivar tus propios alimentos en casa con las técnicas más avanzadas.",
-      "price": 62.99,
-      "rating": 4.9
+      "imagen": "https://cdn.discordapp.com/attachments/1148057148522233868/1154786883952459877/imagen02.png",
+      "titulo": "Cosecha de Otoño: Qué Plantar y Cómo Hacerlo",
+      "fecha": "2023-11-14",
+      "descripcion": "Prepara tu jardín de otoño con esta guía completa. Aprende sobre las mejores plantas para cultivar en esta temporada y cómo cuidarlas adecuadamente."
     },
     {
       "id": 3,
-      "name": "Sostenibilidad en la Agricultura Urbana",
-      "image": "https://cdn.discordapp.com/attachments/1148057148522233868/1155527207159078922/curso3.png",
-      "description": "Explora prácticas agrícolas y estrategias de cultivo que promueven la coexistencia armoniosa entre la agricultura y las ciudades, abordando los desafíos de la seguridad alimentaria.",
-      "price": 49.99,
-      "rating": 5
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Entrevista a una Experta en Hidroponía",
+      "fecha": "2023-11-13",
+      "descripcion": "Prepara tu jardín de otoño con esta guía completa. Aprende sobre las mejores plantas para cultivar en esta temporada y cómo cuidarlas adecuadamente."
     },
     {
       "id": 4,
-      "name": "Hidroponía en casa",
-      "image": "https://cdn.discordapp.com/attachments/1148057148522233868/1155527207503003748/curso4.png",
-      "description": "Aprende a cultivar tus propias plantas en casa con este curso fácil y práctico. Descubre los secretos de la hidroponía y cómo aplicarlos en tu hogar para obtener alimentos frescos y saludables. Con instrucciones detalladas y materiales fáciles de conseguir, este curso es perfecto para cualquier persona interesada en la jardinería en casa.",
-      "price": 48.99,
-      "rating": 5
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Agricultura regenerativa: restaurando la salud del suelo",
+      "fecha": "2023-11-12",
+      "descripcion": "La agricultura regenerativa gana popularidad a medida que los agricultores adoptan prácticas para mejorar la salud del suelo, aumentar la retención de agua y reducir la erosión."
     },
     {
       "id": 5,
-      "name": "Cultivo Orgánico",
-      "image": "https://cdn.discordapp.com/attachments/1148057148522233868/1155527207905673297/curso5.png",
-      "description": "Aprende la importancia de la agricultura orgánica y cómo puedes aplicarla en tu propio huerto.",
-      "price": 39,
-      "rating": 4.9
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Lanzamiento de drones agrícolas inteligentes",
+      "fecha": "2023-11-11",
+      "descripcion": "Una empresa presenta drones agrícolas equipados con tecnología de inteligencia artificial para monitorear cultivos, detectar enfermedades y optimizar el uso de recursos agrícolas."
     },
     {
       "id": 6,
-      "name": "Nutrición de Plantas",
-      "image": "https://cdn.discordapp.com/attachments/1148057148522233868/1155527205720432761/curso6.png",
-      "description": "En este curso aprenderás sobre la nutrición de las plantas, los nutrientes esenciales y cómo aplicarlos en tu propio huerto.",
-      "price": 42.99,
-      "rating": 4.8
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Cultivo de alimentos orgánicos en aumento",
+      "fecha": "2023-11-10",
+      "descripcion": "El interés en los alimentos orgánicos sigue creciendo, y más agricultores adoptan prácticas sostenibles para satisfacer la demanda de productos libres de pesticidas y químicos."
     },
     {
       "id": 7,
-      "name": "Agricultura Vertical",
-      "image": "https://cdn.discordapp.com/attachments/1148057148522233868/1155527243091693699/curso7.png",
-      "description": "Aprende sobre la Agricultura Vertical, su importancia, y las mejores maneras de realizarla.",
-      "price": 32.99,
-      "rating": 4.7
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Desarrollo de supercultivos para combatir el hambre",
+      "fecha": "2023-11-09",
+      "descripcion": "Científicos trabajan en la creación de supercultivos genéticamente mejorados para aumentar los rendimientos y abordar la creciente preocupación por la seguridad alimentaria a nivel mundial."
     },
     {
       "id": 8,
-      "name": "Jardinería Interior",
-      "image": "https://cdn.discordapp.com/attachments/1148057148522233868/1155527243595006024/curso8.png",
-      "description": "Aprende de la mano de los expertos la jardinería interior a tu hogar.",
-      "price": 39.99,
-      "rating": 5
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Innovación en la agricultura de precisión",
+      "fecha": "2023-11-08",
+      "descripcion": "Avances tecnológicos permiten una mayor precisión en la agricultura, con sensores y GPS mejorando la eficiencia en la siembra, el riego y la cosecha de cultivos."
     },
     {
       "id": 9,
-      "name": "Hierbas Frescas",
-      "image": "https://cdn.discordapp.com/attachments/1148057148522233868/1155527243972497478/curso9.png",
-      "description": "Aprende a cultivar tus propias hierbas frescas en casa con este curso fácil y práctico. Descubre los secretos de la hidroponía y cómo aplicarlos en tu hogar para obtener alimentos frescos y saludables. Con instrucciones detalladas y materiales fáciles de conseguir, este curso es perfecto para cualquier persona interesada en la jardinería en casa.",
-      "price": 39.95,
-      "rating": 4.7
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "La agroecología como enfoque sostenible",
+      "fecha": "2023-11-07",
+      "descripcion": "El enfoque agroecológico gana terreno, promoviendo la biodiversidad, la rotación de cultivos y prácticas agrícolas que benefician tanto a los agricultores como al medio ambiente."
+    },
+    {
+      "id": 10,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Proyecto de reforestación en zonas agrícolas",
+      "fecha": "2023-11-06",
+      "descripcion": "Se lanza un proyecto de reforestación en áreas agrícolas para compensar las emisiones de carbono, mejorar la calidad del suelo y proporcionar beneficios adicionales a la comunidad."
+    },
+    {
+      "id": 11,
+      "imagen": "https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png",
+      "titulo": "Desarrollo de alimentos transgénicos resistentes a la sequía",
+      "fecha": "2023-11-05",
+      "descripcion": "Investigadores logran crear alimentos transgénicos que pueden resistir condiciones de sequía, ofreciendo una solución potencial para enfrentar los desafíos del cambio climático en la agricultura."
     }
-  ],
-  "Allcourses": [
-    {
-      "name": "Microcourse 1: Basics of Home Hydroponics",
-      "image": "https://diariohoynet.nyc3.cdn.digitaloceanspaces.com/adjuntos/galerias/000/355/0000355028.jpg",
-      "duration": "1",
-      "price": 20.5,
-      "category": "HydroponicsAtHome",
-      "description": "Learn the basics of home hydroponics, including growing systems, plant selection and essential nutrients.",
-      "rating": 0,
-      "id": 1
-    },
-    {
-      "name": "Microcourse 2: Building a Home Hydroponic System",
-      "duration": "2",
-      "category": "GrowingPlants",
-      "price": 62.99,
-      "image": "https://www.pthorticulture.com/media/4086/promix-greenhouse-growing-hydroponic-roots.jpg",
-      "description": "Step by step, create your own hydroponic system at home using affordable materials. Includes practical tutorials.",
-      "rating": 0,
-      "id": 2
-    },
-    {
-      "name": "Microcourse 3: Hydroponics Maintenance and Troubleshooting",
-      "category": "NewCourses",
-      "duration": "1",
-      "price": 49.99,
-      "image": "https://scychiller.com/wp-content/uploads/2022/01/Growing-Plants-With-Hydroponics.jpg",
-      "description": "Learn how to care for and maintain your hydroponic garden. Identify and solve common problems for successful cultivation.",
-      "rating": 0,
-      "id": 3
-    },
-    {
-      "name": "xddd",
-      "duration": "2",
-      "category": "HydroponicsAtHome",
-      "price": 5000,
-      "image": "https://somoskudasai.com/wp-content/uploads/2021/02/portada_senpai-ga-uzai-kouhai-3.jpg",
-      "description": "asx",
-      "rating": 0,
-      "id": 4
-    },
-    {
-      "id": 5,
-      "name": "xd",
-      "image": "https://somoskudasai.com/wp-content/uploads/2021/02/portada_senpai-ga-uzai-kouhai-3.jpg",
-      "description": "sdafdasdas",
-      "price": 1000,
-      "rating": 0,
-      "duration": "5",
-      "category": "GrowingPlants",
-      "date": "12/11/2023"
-    }
-  ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "Oportunidades de Negocios en Ferias Agricolas",
-      "author": "Arturo Vidal test",
-      "date": "2021-07-01",
-      "image": "https://media.discordapp.net/attachments/1148057148522233868/1154875356520648795/pexels-dima-valkov-6503007_4.png",
-      "description": "Descripción 1",
-      "views": "100",
-      "likes": "50",
-      "comments": "30",
-      "tags": [
-        "agricultura",
-        "ferias",
-        "negocios"
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Cultivo de Tomate en Invernadero",
-      "author": "Paolo Checa",
-      "date": "2021-07-01",
-      "image": "https://media.discordapp.net/attachments/1148057148522233868/1154875355967004795/pexels-dima-valkov-6211616_1_3.png",
-      "description": "Descripción 2",
-      "views": "100",
-      "likes": "50",
-      "comments": "30",
-      "tags": [
-        "agricultura",
-        "ferias",
-        "negocios"
-      ]
-    },
-    {
-      "title": "adas",
-      "description": "dasdasd",
-      "author": "dasd",
-      "image": "asdas",
-      "tags": [
-        "ads"
-      ],
-      "id": 3
-    },
-    {
-      "id": 4,
-      "title": "xdx",
-      "author": "xdx",
-      "date": "12/11/2023",
-      "image": "xdx",
-      "description": "dxd",
-      "tags": [
-        "xd"
-      ],
-      "likes": 0,
-      "comments": 0,
-      "views": 0
-    }
-  ],
-  "trends": [
-    "Oportunidades de Negocios en Ferias Agricolas",
-    "Cultivo de Tomate en Invernadero",
-    "Iniciando en la Hidroponía: Consejos para Principiantes",
-    "Iniciando en la Hidroponía: Consejos para Principiantes"
   ]
 }

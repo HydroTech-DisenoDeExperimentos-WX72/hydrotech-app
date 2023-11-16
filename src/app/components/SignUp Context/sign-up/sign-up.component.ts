@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { Router, RouterModule } from '@angular/router';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { AuthService, Credential } from 'src/app/core/services/auth.service';
-import { ButtonProviders } from 'src/app/components/button-providers/button-providers.component';
+import { ButtonProviders } from 'src/app/components/button-providers/button-providers.component'
 
 interface SignUpForm {
   names: FormControl<string>;
@@ -91,17 +91,8 @@ export default class SignUpComponent {
       password: this.form.value.password || '',
     };
 
-    // Recopila datos adicionales
-    const userData = {
-      displayName: this.form.value.names + ' ' + this.form.value.lastName,
-    };
-
     try {
-      const userCredential = await this.authService.signUpWithEmailAndPassword(credential);
-      const user = userCredential.user;
-
-      // Actualiza los datos adicionales del usuario en Firebase
-      await this.authService.updateProfile(user, userData);
+      await this.authService.signUpWithEmailAndPassword(credential);
 
       const snackBarRef = this.openSnackBar();
 
@@ -114,7 +105,7 @@ export default class SignUpComponent {
   }
 
   openSnackBar() {
-    return this._snackBar.open('Successfully Sign up 😀', 'Close', {
+    return this._snackBar.open('Succesfully Sign up 😀', 'Close', {
       duration: 2500,
       verticalPosition: 'top',
       horizontalPosition: 'end',
