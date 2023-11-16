@@ -17,15 +17,13 @@
                     <mat-hint>In weeks</mat-hint>
                 </mat-form-field>
         
-                <mat-form-field>
-                    <mat-label>Select a Category</mat-label>
-                    <mat-select [(ngModel)]="courseData.category" placeholder="Category" name="category">
-                        <mat-option value="HydroponicsAtHome">Hydroponics at Home</mat-option>
-                        <mat-option value="GrowingPlants">Growing medicinal plants indoors</mat-option>
-                        <mat-option value="NewCourses">New Courses</mat-option>
-                    </mat-select>
-                    
-                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Current date</mat-label>
+                    <input matInput [matDatepicker]="picker" name="date" [(ngModel)]="courseData.dateCreated" required>
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
                   
             </div>
             <div class="row">

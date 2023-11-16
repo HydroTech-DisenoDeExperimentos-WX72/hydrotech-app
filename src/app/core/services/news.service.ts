@@ -1,13 +1,13 @@
+import { ArticleModel } from './../models/articles.model';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, retry, throwError} from 'rxjs';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { DataModel } from '../models/data.model';
 
 @Injectable({
     providedIn: 'root'
 })
-export class CoursesService {
-    baseUrl = 'https://my-json-server.typicode.com/PaoloCh/jsonServer/Allcourses';
+export class NewsService {
+    baseUrl = 'https://my-json-server.typicode.com/yancefranco/pruebajson/tendencias';
 
     constructor(private http: HttpClient) { }
 
@@ -30,20 +30,14 @@ export class CoursesService {
     }
     
     //GET
-    getListCourses(): Observable<DataModel>{
-      return this.http.get<DataModel>(this.baseUrl)
+    getListArticles(): Observable<ArticleModel>{
+      return this.http.get<ArticleModel>(this.baseUrl)
       .pipe(retry(2),catchError(this.handleError))
     }
 
     //GetById
-    getCourseById(id: any): Observable<DataModel>{
-      return this.http.get<DataModel>(this.baseUrl + '/' + id)
-      .pipe(retry(2),catchError(this.handleError))
-    }
-
-    //Post
-    createCourse(data: DataModel): Observable<DataModel>{
-      return this.http.post<DataModel>(this.baseUrl, data, this.httpOptions)
+    getArticleById(id: any): Observable<ArticleModel>{
+      return this.http.get<ArticleModel>(this.baseUrl + '/' + id)
       .pipe(retry(2),catchError(this.handleError))
     }
 }

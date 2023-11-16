@@ -1,5 +1,28 @@
+.contenedor{
+  display: flex;
+  position: relative;
+}
+.lista-izquierda {
+  /* Ajustamos la posición superior a 0 para que se superponga en la parte superior */
+  display: inline-block;
+  vertical-align: top;
+  width: 353px;
+  margin-top: 100px;
+  text-align: center;
+  border: 3px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  max-width:353px; /* Ancho máximo de la tarjeta */
+  width: 100%;
+  height: 680px;
+  margin-left: 4%;
+  margin-right: 4%;
+ 
+}
+#fecha{
+  background-color:#C2EFD4;
 
-
+}
 .centered {
     margin-left: 1vh;
     display: flex;
@@ -7,7 +30,7 @@
     margin-right: 0px;
     align-items: center;
     justify-content: center;
-    height: 210vh;
+    height: 358vh;
   }
   .card1 {
     text-align: center;
@@ -123,57 +146,16 @@
   
   
 
-.lista-izquierda {
-    position:absolute;
-    top: 0; /* Ajustamos la posición superior a 0 para que se superponga en la parte superior */
-    lefth: 0; /* Ajustamos la posición izquierda a 0 para que se superponga en la parte izquierda */
-    z-index: 9999; /* Ajustamos el índice z para que esté por encima de otros elementos */
-    display: inline-block;
-    vertical-align: top;
-    width: 353px;
-    margin-top: 120px;
-    text-align: center;
-    border: 3px solid #ccc;
-    background-color: #f9f9f9;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    max-width:353px; /* Ancho máximo de la tarjeta */
-    width: 100%;
-    margin-left: 100px;
-    margin-right: 10px;
-    float: left
-    
-  }
-  #fecha{
-    background-color:#C2EFD4;
 
-  }
 
   /* Estilos para alinear una lista a la derecha */
 .card6 {
-    display: flexbox;
-    vertical-align: top;
-    float: right;
-    
-    margin-left: 0px;
-    margin-right: 50px;
-    position: absolute; /* Cambiamos la posición a 'fixed' */
-    top: 0; /* Ajustamos la posición superior a 0 para que se superponga en la parte superior */
-    right: 0; /* Ajustamos la posición izquierda a 0 para que se superponga en la parte izquierda */
-    z-index: 9999; /* Ajustamos el índice z para que esté por encima de otros elementos */
-    margin-top: 120px;
-}
-.card6 {
     text-align: left;
-   
-    border: 0px solid #f9f9f9;
-    background-color: #f9f9f9;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-    max-width: 317px;
-    width: 100%;
-    margin-bottom: 15px
-     
-
-  }
+    vertical-align: top;
+    margin-left: 8%;
+    margin-right: 4%;
+    margin-top: 4%;
+}
 
   .card6 h5 {
     font-size: 0.1 rem;

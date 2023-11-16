@@ -3,7 +3,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { AddCourseComponent } from '../add-course/add-course.component';
 import { Router } from '@angular/router';
 import { CoursesService } from 'src/app/core/services/courses.service';
-import { CourseModel } from 'src/app/core/models/course.model';
+import { DataModel } from 'src/app/core/models/data.model';
 
 @Component({
   selector: 'app-courses',
@@ -14,9 +14,7 @@ import { CourseModel } from 'src/app/core/models/course.model';
 export class CoursesComponent implements OnInit {
   breakpoint: number = 0;
   Allcourses: any[] = [];
-  filteredCoursesbyCategory1: any[] = [];
-  filteredCoursesbyCategory2: any[] = [];
-  filteredCoursesbyCategory3: any[] = [];
+  filteredCourses: any[] = [];
 
 
   
@@ -39,9 +37,7 @@ getAllCourses(){
     //visualizetheAllcoursesIdinConsoleLog
     console.log(this.Allcourses);
     // En tu componente
-    this.filteredCoursesbyCategory1 = this.Allcourses.filter(course => course.category == 'HydroponicsAtHome');
-    this.filteredCoursesbyCategory2 = this.Allcourses.filter(course => course.category == 'GrowingPlants');
-    this.filteredCoursesbyCategory3 = this.Allcourses.filter(course => course.category == 'NewCourses');
+    this.filteredCourses = this.Allcourses.filter(course => course.id > 3 && course.id <= 9);
   })
 }
 redirectToPayment(curso: any) {

@@ -1,39 +1,59 @@
+
+<div class="contenedor">
+<div class="lista-izquierda">
+  <mat-list>
+    <mat-list-item id="fecha">{{articleInit.fecha}}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Hoy</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item  *ngFor="let article of articles; let i = index"
+      >{{article.titulo}}</mat-list-item
+    >
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
+
+
 <div class="centered">
-    <mat-chip-listbox id="selected" aria-label="Fish selection">
-      <mat-chip-option color="primary" selected>Deforestacion</mat-chip-option>
-      <mat-chip-option color="primary" selected>Agroindustria</mat-chip-option>
-      <mat-chip-option color="primary" selected>Hidroponia</mat-chip-option>
-      <mat-chip-option color="primary" selected>Agro-Rural</mat-chip-option>
-    </mat-chip-listbox>
-    <div class="tendencia-card">
-        <h3>#EnTendencia</h3>
-      </div>
-    <div class="card">
-      <img src="https://media.discordapp.net/attachments/1148057148522233868/1154633127466106940/imagen01.png?width=720&height=216" alt="Título de la imagen">
-      <h2>LA DEFORESTACION INCREMENTO EN PANDEMIA                             18/05/23</h2>
-      <p>"Durante la pandemia, la deforestación ha alcanzado niveles preocupantes en todo el mundo, destacando la necesidad urgente de prácticas agrícolas sostenibles y conservación forestal."</p>
+  
+  <mat-chip-listbox id="selected" aria-label="Fish selection">
+    <mat-chip-option color="primary" selected>Deforestacion</mat-chip-option>
+    <mat-chip-option color="primary" selected>Agroindustria</mat-chip-option>
+    <mat-chip-option color="primary" selected>Hidroponia</mat-chip-option>
+    <mat-chip-option color="primary" selected>Agro-Rural</mat-chip-option>
+  </mat-chip-listbox>
+  <div class="tendencia-card">
+    <h3>#EnTendencia</h3>
+  </div>
+  <div class="card" *ngIf="loading == false">
+    <img src="{{ articleInit.imagen }}" alt="Título de la imagen" />
+    <h2>{{ articleInit.titulo }} {{ articleInit.fecha }}</h2>
+    <p>{{ articleInit.descripcion }}</p>
+  </div>
+  <!--fila 1-->
+  <div class="card-container">
+    <div class="card1" *ngFor="let article of articles; let i = index">
+      <img
+        [src]="article.imagen"
+        alt="{{article.imagen}}"
+      />
+      <h2>{{article.titulo}} {{ articleInit.fecha }}</h2>
+      <p>
+        {{article.descripcion}}
+      </p>
     </div>
-    <!--fila 1-->
-    <div class="card-container">
-    <div class="card1">
-        <img src="https://cdn.discordapp.com/attachments/1148057148522233868/1154786883952459877/imagen02.png" alt="Título de la imagen 1">
-        <h2>Cosecha de Otoño: Qué Plantar y Cómo Hacerlo </h2>
-        <p>Prepara tu jardín de otoño con esta guía completa. Aprende sobre las mejores plantas para cultivar en esta temporada y cómo cuidarlas adecuadamente.</p>
-      </div>
-      <div class="card1">
-        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154788734437425243/imagen03.png" alt="Título de la imagen 2">
-        <h2>Entrevista a una Experta en Hidroponía</h2>
-        <p>Hablamos con una experta en hidroponía sobre su viaje y consejos para principiantes. Descubre sus secretos para el éxito en la agricultura en interiores.</p>
-      </div>
-    </div>
-      
-      <div class="card2">
-        <h5>Publicidad </h5>
-        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154791821323554917/imagen04.png?width=720&height=151" alt="Título de la imagen">
-        </div>
-    
-    <div class="card-container">
-      <!-- Fila 2 -->
+  </div>
+
+  <div class="card2">
+    <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/">
+    <h5>Publicidad</h5>
+    <img
+      src="https://media.discordapp.net/attachments/1148057148522233868/1154791821323554917/imagen04.png?width=720&height=151"
+      alt="Título de la imagen"
+    /></a>
+  </div>
+
+  <!-- <div class="card-container">
       <div class="card1">
         <img src="https://media.discordapp.net/attachments/1148057148522233868/1154786883952459877/imagen02.png" alt="Título de la imagen 3">
         <h2>Cosecha de Otoño: Qué Plantar y Cómo Hacerlo </h2>
@@ -44,8 +64,7 @@
         <h2>Entrevista a una Experta en Hidroponía</h2>
         <p>Hablamos con una experta en hidroponía sobre su viaje y consejos para principiantes. Descubre sus secretos para el éxito en la agricultura en interiores.</p>
       </div>
-      
-      <!-- Fila 3 -->
+
       <div class="card1">
         <img src="https://media.discordapp.net/attachments/1148057148522233868/1154786883952459877/imagen02.png" alt="Título de la imagen 5">
         <h2>Cosecha de Otoño: Qué Plantar y Cómo Hacerlo </h2>
@@ -57,35 +76,19 @@
         <p>Hablamos con una experta en hidroponía sobre su viaje y consejos para principiantes. Descubre sus secretos para el éxito en la agricultura en interiores.</p>
       </div>
     </div>
-    
-    </div>
-  
-<div class="lista-izquierda">
-    <mat-list >
-    
-    <mat-list-item id="fecha">Lunes 02 enero</mat-list-item>
-      <mat-divider></mat-divider>
-        <mat-list-item>Hoy</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>Nuevas técnicas agrícolas impulsan la sostenibilidad en la producción de alimentos.</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>Tecnología agrícola innovadora transforma la forma en que cultivamos alimentos.</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>Prácticas agrícolas modernas promueven la eficiencia y la sostenibilidad ambiental.</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>El futuro de la agricultura: tecnología avanzada y métodos sostenibles.</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>Innovaciones agrícolas para un mundo más sostenible y eficiente.</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>La tecnología cambia la cara de la agricultura, impulsando la sostenibilidad.</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>Agricultura de precisión: el camino hacia una producción de alimentos sostenible.</mat-list-item>
-        <mat-divider></mat-divider>
-      </mat-list>
-    </div>
+     -->
+</div>
 
-    <div class="card6">
-        <h5>Publicidad </h5>
-        <img src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=503&height=668" alt="Título de la imagen">
-        </div>
-    
+
+<div class="card6">
+  <a href="https://www.agrisolucion.com/distribuidor/ver/greenhow/"><h5>Publicidad </h5>
+    <img src="https://media.discordapp.net/attachments/1148057148522233868/1154841794379526204/imagen06.png?width=503&height=668" alt="Título de la imagen">
+  </a>
+  
+</div>  
+
+
+
+</div>
+
+

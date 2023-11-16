@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DbService } from 'src/app/core/services/db.service';
 import { ToastrService } from 'ngx-toastr';
-import { PostModel } from 'src/app/core/models/post.model';
 
 @Component({
   selector: 'app-createpost',
@@ -10,26 +9,23 @@ import { PostModel } from 'src/app/core/models/post.model';
   styleUrls: ['./createpost.component.scss']
 })
 export class CreatepostComponent {
-  newPost!: PostModel;
+  newPost = {
+    title: '',
+    author: '',
+    date: new Date().toLocaleDateString('es-ES'),
+    image: '',
+    description: '',
+    tags: [] as string[],
+    likes: 0,
+    comments: 0,
+    views: 0,
+  };
 
   constructor(
     private dbService: DbService,
     private toastr: ToastrService,
     private router: Router
-  ) {
-    this.newPost = {
-      id: '',
-      title: '',
-      author: '',
-      date: new Date().toLocaleDateString('es-ES'),
-      image: '',
-      description: '',
-      tags: [],
-      likes: 0,
-      comments: 0,
-      views: 0,
-    }
-  }
+  ) {}
 
   createPost() {
     this.newPost.tags = this.newPost.tags
