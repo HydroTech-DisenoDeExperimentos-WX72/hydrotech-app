@@ -4,4 +4,5 @@ export interface ArticleModel {
     titulo: any;
     fecha: any;
     descripcion: any;
+    enlace: any;
 }
