@@ -11,7 +11,7 @@ import { DataModel } from '../models/data.model';
   providedIn: 'root',
 })
 export class DbService {
-  baseUrl = 'https://my-json-server.typicode.com/PaoloCh/jsonServer';
+  baseUrl = 'https://greengrow.zeabur.app/api/green-grow/v1';
 
   constructor(private http: HttpClient) {}
 
