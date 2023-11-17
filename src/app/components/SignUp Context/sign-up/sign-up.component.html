@@ -8,7 +8,7 @@
       <form [formGroup]="form" (ngSubmit)="signUp()">
         <div>
           <mat-form-field>
-            <mat-label>Nombres</mat-label>
+            <mat-label>Name</mat-label>
             <input matInput formControlName="names" />
             <mat-error>This field is required</mat-error>
           </mat-form-field>
@@ -16,7 +16,7 @@
   
         <div>
           <mat-form-field>
-            <mat-label>Apellidos</mat-label>
+            <mat-label>Last Name</mat-label>
             <input matInput formControlName="lastName" />
             <mat-error>This field is required</mat-error>
           </mat-form-field>

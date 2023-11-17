@@ -13,7 +13,7 @@
     <div class="border-trending">
       <div class="trending">
         <div class="trending-content">
-          <h3>Temas Populares</h3>
+          <h3>Popular Topics</h3>
           <div *ngFor="let trend of trends">
             <p>{{ trend }}</p>
           </div>
@@ -36,14 +36,14 @@
 
   <div fxFlex.xs="100" fxFlex.gt-sm="60">
     <div class="search-bar">
-      <div>Compartamos lo que pasa por tu mente...</div>
-      <button routerLink="/createpost">Crear Post</button>
+      <div>Let's share what's on your mind...</div>
+      <button routerLink="/createpost">Create Post</button>
     </div>
 
     <div class="posts">
       <div *ngFor="let post of posts">
         <div class="post-header">
-          <h3>Eventos y ferias agrícolas</h3>
+          <h3>Agricultural events and fairs</h3>
         </div>
         <div class="post">
           <div class="post-content">
@@ -77,7 +77,7 @@
   <!-- Columna 3: Publicidades (imágenes estáticas) -->
   <div fxFlex.xs="100" fxFlex.gt-sm="20">
     <div class="advertising">
-      <p>Publicidad</p>
+      <p>Advertising</p>
       <a
         href="https://www.agrisolucion.com/distribuidor/ver/greenhow/"
         target="_blank"
