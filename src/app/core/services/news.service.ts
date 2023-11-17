@@ -7,7 +7,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
     providedIn: 'root'
 })
 export class NewsService {
-    baseUrl = 'https://my-json-server.typicode.com/yancefranco/pruebajson/tendencias';
+    baseUrl = 'https://greengrow.zeabur.app/api/green-grow/v1/articles';
 
     constructor(private http: HttpClient) { }
 
