@@ -2,7 +2,7 @@
 <br>
 <br>
 <div *ngIf="user">
-    <h2>Perfil de {{ user.displayName }}</h2>
+    <h2>{{ user.displayName }} 's Profile </h2>
     <img [src]="userPhotoURL" alt="Foto de perfil" (error)="userPhotoURL = 'https://i.imgur.com/eJtTmKu.png'">
     <p>Email: {{ user.email }}</p>
     <p>Name: {{user.displayName}}</p>
