@@ -9,6 +9,9 @@ import { ComunnityComponent } from './components/Community Context/comunnity/com
 import { PaymentComponent } from './components/Shared/payment/payment.component';
 import { CreatepostComponent } from './components/CreatePost/createpost/createpost.component';
 
+import { authGuard } from './core/guards/auth.guard';
+import { ProfileComponent } from './components/Shared/profile/profile.component';
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'courses', component: CoursesComponent },
@@ -18,8 +21,10 @@ const routes: Routes = [
   { path: 'comunnity', component: ComunnityComponent },
   { path: 'createpost', component: CreatepostComponent },
   { path: 'payment', component: PaymentComponent }, // Agrega esta ruta para el componente de pago
-  { path: '', pathMatch: 'full', redirectTo: 'home'},
-  { path: '**', pathMatch: 'full', redirectTo: 'home'},
+  { path: 'profile', component: ProfileComponent, canActivate: [authGuard] },
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
+  { path: '**', redirectTo: 'login' },
+  
  
 ];
 
