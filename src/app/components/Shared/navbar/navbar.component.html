@@ -2,9 +2,9 @@
   <mat-sidenav #sidenav mode="over" fixedInViewport="true" class="sidenav">
     <div fxLayout="column" fxLayoutGap="10px">
       <a mat-button routerLink="/home">HOME</a>
-      <a mat-button routerLink="/articles">ARTICULOS</a>
-      <a mat-button routerLink="/courses">CURSOS</a>
-      <a mat-button routerLink="/comunnity">COMUNIDAD</a>
+      <a mat-button routerLink="/articles">ARTICLES</a>
+      <a mat-button routerLink="/courses">COURSES</a>
+      <a mat-button routerLink="/comunnity">COMMUNITY</a>
       <ng-container *ngIf="user; else loginButton">
         <a mat-button (click)="navigateToProfile()">MY ACCOUNT</a>
       </ng-container>
@@ -28,9 +28,9 @@
     <span>GreenGrow</span>
     <div class="spacer"></div>
     <a mat-button routerLink="/home">HOME</a>
-    <a mat-button routerLink="/articles">ARTICULOS</a>
-    <a mat-button routerLink="/courses">CURSOS</a>
-    <a mat-button routerLink="/comunnity">COMUNIDAD</a>
+    <a mat-button routerLink="/articles">ARTICLES</a>
+    <a mat-button routerLink="/courses">COURSES</a>
+    <a mat-button routerLink="/comunnity">COMMUNITY</a>
     <ng-container *ngIf="user; else loginButton">
       <a mat-button (click)="navigateToProfile()">MY ACCOUNT</a>
     </ng-container>
