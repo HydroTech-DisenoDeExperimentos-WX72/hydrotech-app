@@ -39,6 +39,7 @@ export class AddCourseComponent {
   } */
 
     addCourse() {
+    this.courseData.rating = 0.0;
     this._coursesService.createCourse(this.courseData).subscribe((data: any)=>{
       alert("Course created");
       console.log(data);
