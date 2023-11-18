@@ -29,7 +29,7 @@ export class ButtonProviders {
   async signUpWithGoogle(): Promise<void> {
     try {
       const result = await this._authService.signInWithGoogleProvider();
-      this._router.navigateByUrl('/');
+      this._router.navigateByUrl('/home');
       console.log(result);
     } catch (error) {
       console.log(error);
@@ -39,7 +39,7 @@ export class ButtonProviders {
   async signUpWithGithub(): Promise<void> {
     try {
       const result = await this._authService.signInWithGithubProvider();
-      this._router.navigateByUrl('/');
+      this._router.navigateByUrl('/home');
       console.log(result);
     } catch (error) {
       console.log(error);

@@ -9,6 +9,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signInWithPopup,
+  updateProfile as updateProfileFirebase, // Importa la función de actualización de perfil
 } from '@angular/fire/auth';
 
 export interface Credential {
@@ -57,8 +58,7 @@ export class AuthService {
 
     return this.callPopUp(provider);
   }
-
-
+  
   async callPopUp(provider: AuthProvider): Promise<UserCredential> {
     try {
       const result = await signInWithPopup(this.auth, provider);
@@ -66,6 +66,15 @@ export class AuthService {
       return result;
     } catch (error: any) {
       return error;
+    }
+  }
+
+  // Método para actualizar el perfil del usuario en Firebase
+  async updateProfile(user: any, userData: any): Promise<void> {
+    try {
+      await updateProfileFirebase(user, userData);
+    } catch (error) {
+      throw error; // Puedes manejar el error de la manera que desees
     }
   }
 }
