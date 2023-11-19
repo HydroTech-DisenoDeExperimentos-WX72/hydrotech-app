@@ -8,7 +8,7 @@ import { DbService } from 'src/app/core/services/db.service';
 })
 export class ComunnityComponent {
   posts: any[] = [];
-  trends: string[] = [];
+  trends: any[] = [];
 
   constructor(private dbService: DbService) {}
 
