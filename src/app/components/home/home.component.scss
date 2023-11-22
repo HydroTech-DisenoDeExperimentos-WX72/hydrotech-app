@@ -16,21 +16,8 @@ section.oferta{
     grid-gap: 2rem;
 }
 
-.containerE{
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));
-    grid-gap: 2rem;
-}
 
 .col1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.lis1{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,12 +30,6 @@ section.oferta{
     flex-direction: column;
 }
 
-.lis2{
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 
 .col3{
     padding: 1rem 2rem;
@@ -120,11 +101,3 @@ img.medium{
     align-items: center;
 }
 
-
-.subBtn{
-    background-color: #224f34;
-    color: white;
-    border-color: #224f34;
-    width: 30%;
-    height: 15%;
-}
