@@ -7,7 +7,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
     providedIn: 'root'
 })
 export class NewsService {
-    baseUrl = 'https://greengrow.zeabur.app/api/green-grow/v1/articles';
+    baseUrl = 'https://hydrotech-backend.onrender.com/api/hydro-tech/v1/articles';
 
     constructor(private http: HttpClient) { }
 

@@ -7,7 +7,7 @@ import { DataModel } from '../models/data.model';
     providedIn: 'root'
 })
 export class CoursesService {
-    baseUrl = 'https://greengrow.zeabur.app/api/green-grow/v1/courses';
+    baseUrl = 'https://hydrotech-backend.onrender.com/api/hydro-tech/v1/courses';
 
     constructor(private http: HttpClient) { }
 
