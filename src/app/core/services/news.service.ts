@@ -7,13 +7,13 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
     providedIn: 'root'
 })
 export class NewsService {
-    baseUrl = 'https://hydrotech-backend.onrender.com/api/hydro-tech/v1/articles';
+    baseUrl = 'https://hydrotech-v3.zeabur.app/api/hydro-tech/v1/articles';
 
     constructor(private http: HttpClient) { }
 
     httpOptions = {
       headers: new HttpHeaders({
-          'Content-Type': 'application/json'  
+          'Content-Type': 'application/json'
       })
     };
 
@@ -28,7 +28,7 @@ export class NewsService {
         'Something happened with request, please try again later'
       );
     }
-    
+
     //GET
     getListArticles(): Observable<ArticleModel>{
       return this.http.get<ArticleModel>(this.baseUrl)

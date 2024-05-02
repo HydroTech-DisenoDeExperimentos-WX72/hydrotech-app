@@ -11,7 +11,7 @@ import { DataModel } from '../models/data.model';
   providedIn: 'root',
 })
 export class DbService {
-  baseUrl = 'https://hydrotech-backend.onrender.com/api/hydro-tech/v1';
+  baseUrl = 'https://hydrotech-v3.zeabur.app/api/hydro-tech/v1';
 
   constructor(private http: HttpClient) {}
 

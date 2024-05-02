@@ -15,7 +15,13 @@ section.oferta{
     grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));
     grid-gap: 2rem;
 }
-
+.container {
+  width: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), /* Fondo difuminado blanco */
+  linear-gradient(135deg, #00FF00, #FFFFFF); /* Fondo difuminado verde */
+}
 
 .col1{
     display: flex;
@@ -83,7 +89,7 @@ img.medium{
 .matBtn{
     width: 50%;
 }
-  
+
 .example-header-image {
     background-size: cover;
 }

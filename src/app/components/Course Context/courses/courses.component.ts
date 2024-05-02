@@ -16,18 +16,18 @@ export class CoursesComponent implements OnInit {
   Allcourses: any[] = [];
   filteredCoursesbyCategory1: any[] = [];
   filteredCoursesbyCategory2: any[] = [];
-  filteredCoursesbyCategory3: any[] = []; 
+  filteredCoursesbyCategory3: any[] = [];
 
 
-  
-  constructor(private _dialog: MatDialog, private router: Router, private _coursesService: CoursesService) { 
+
+  constructor(private _dialog: MatDialog, private router: Router, private _coursesService: CoursesService) {
 
   }
   ngOnInit() {
 
     this.getAllCourses();
 }
-  
+
 openAddCourse() {
   this._dialog.open(AddCourseComponent);
 }
@@ -40,7 +40,7 @@ getAllCourses(){
     console.log(this.Allcourses);
     // En tu componente
     this.filteredCoursesbyCategory1 = this.Allcourses.filter(course => course.category == 'HydroponicsAtHome');
-    this.filteredCoursesbyCategory2 = this.Allcourses.filter(course => course.category == 'GrowingPlants');
+    this.filteredCoursesbyCategory2 = this.Allcourses.filter(course => course.category == 'Control');
     this.filteredCoursesbyCategory3 = this.Allcourses.filter(course => course.category == 'NewCourses');
   })
 }

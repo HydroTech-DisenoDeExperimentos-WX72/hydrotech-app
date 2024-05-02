@@ -13,9 +13,7 @@
       required
     />
     <div
-      *ngIf="
-        postForm.controls['title'].invalid && postForm.controls['title'].touched
-      "
+      *ngIf="postForm.controls['title'] && postForm.controls['title'].touched"
     >
       <p class="error">The title is required.</p>
     </div>
@@ -36,7 +34,7 @@
     />
     <div
       *ngIf="
-        postForm.controls['author'].invalid &&
+        postForm.controls['author'] &&
         postForm.controls['author'].touched
       "
     >
@@ -52,22 +50,22 @@
     />
     <div
       *ngIf="
-        postForm.controls['image'].invalid && postForm.controls['image'].touched
+        postForm.controls['image'] && postForm.controls['image'].touched
       "
     >
       <p class="error">The image URL is required.</p>
     </div>
-    <label for="tags">Tags:</label>
+    <label for="tag">Tag:</label>
     <input
       type="text"
-      id="tags"
-      name="tags"
-      [(ngModel)]="newPost.tags"
+      id="tag"
+      name="tag"
+      [(ngModel)]="newPost.tag"
       required
     />
     <div
       *ngIf="
-        postForm.controls['tags'].invalid && postForm.controls['tags'].touched
+        postForm.controls['tag'] && postForm.controls['tag'].touched
       "
     >
       <p class="error">Labels are mandatory.</p>
