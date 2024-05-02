@@ -1,7 +1,7 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component, Input, inject } from '@angular/core';
 import { Router } from '@angular/router';
-export type Provider = 'github' | 'google' ;
+export type Provider = /*'github' |*/ 'google' ;
 import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
@@ -20,10 +20,10 @@ export class ButtonProviders {
   providerAction(provider: Provider): void {
     if (provider === 'google') {
       this.signUpWithGoogle();
-    } else {
+    }/* else {
       this.signUpWithGithub();
-    }
-   
+    }*/
+
   }
 
   async signUpWithGoogle(): Promise<void> {
@@ -36,7 +36,7 @@ export class ButtonProviders {
     }
   }
 
-  async signUpWithGithub(): Promise<void> {
+  /*async signUpWithGithub(): Promise<void> {
     try {
       const result = await this._authService.signInWithGithubProvider();
       this._router.navigateByUrl('/home');
@@ -44,6 +44,6 @@ export class ButtonProviders {
     } catch (error) {
       console.log(error);
     }
-  }
-  
+  }*/
+
 }

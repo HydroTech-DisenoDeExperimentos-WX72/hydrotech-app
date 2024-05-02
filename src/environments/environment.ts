@@ -1,10 +1,10 @@
 export const environment = {
   firebase: {
-    projectId: 'deploy-greengrow',
-    appId: '1:830150306191:web:c7dd08aa36c81be85ec3fa',
-    storageBucket: 'deploy-greengrow.appspot.com',
-    apiKey: 'AIzaSyDqcqyE-hsgiGxWguBFDK9wDG0xY_wrRIk',
-    authDomain: 'deploy-greengrow.firebaseapp.com',
-    messagingSenderId: '830150306191',
+    apiKey: "AIzaSyCwqXSCxKISntcIFaKFAAIFkszp2EeMptU",
+    authDomain: "hydrotech-d32db.firebaseapp.com",
+    projectId: "hydrotech-d32db",
+    storageBucket: "hydrotech-d32db.appspot.com",
+    messagingSenderId: "1015126854768",
+    appId: "1:1015126854768:web:887d3c5bcb291b69f138b5",
   },
 };

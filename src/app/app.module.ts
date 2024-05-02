@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { getAnalytics } from "firebase/analytics";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/Shared/navbar/navbar.component';
@@ -34,14 +34,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { ToastrModule } from 'ngx-toastr';
-
 import { AddCourseComponent } from './components/Course Context/add-course/add-course.component';
 import { PaymentComponent } from './components/Shared/payment/payment.component';
 import { CreatepostComponent } from './components/CreatePost/createpost/createpost.component';
-
 import { ProfileComponent } from './components/Shared/profile/profile.component';
 import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {AngularFireModule} from "@angular/fire/compat";
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 
 @NgModule({
   declarations: [
@@ -55,7 +55,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     PaymentComponent,
     CreatepostComponent,
     ProfileComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -86,7 +86,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatDatepickerModule,
     ReactiveFormsModule,
     FormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyCwqXSCxKISntcIFaKFAAIFkszp2EeMptU",
+      authDomain: "hydrotech-d32db.firebaseapp.com",
+      projectId: "hydrotech-d32db",
+      storageBucket: "hydrotech-d32db.appspot.com",
+      messagingSenderId: "1015126854768",
+      appId: "1:1015126854768:web:887d3c5bcb291b69f138b5",
+      measurementId: "G-ZDNWW0GKD7"
+    }),
 
 
   ],
