@@ -1,4 +1,8 @@
 {
+  "projects": {
+    "default": "hydrotech-d32db",
+    "hydrotech": "hydrotech-d32db"
+  },
   "targets": {
     "deploy-greengrow": {
       "hosting": {
@@ -8,7 +12,6 @@
       }
     }
   },
-  "projects": {
-    "default": "deploy-greengrow"
-  }
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

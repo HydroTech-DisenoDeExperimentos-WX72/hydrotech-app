@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/greengrow",
+    "public": "dist/hydrotech",
     "ignore": [
       "firebase.json",
       "**/.*",
