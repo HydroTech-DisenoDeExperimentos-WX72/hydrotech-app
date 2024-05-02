@@ -40,7 +40,7 @@ getAllCourses(){
     console.log(this.Allcourses);
     // En tu componente
     this.filteredCoursesbyCategory1 = this.Allcourses.filter(course => course.category == 'HydroponicsAtHome');
-    this.filteredCoursesbyCategory2 = this.Allcourses.filter(course => course.category == 'GrowingPlants');
+    this.filteredCoursesbyCategory2 = this.Allcourses.filter(course => course.category == 'Control');
     this.filteredCoursesbyCategory3 = this.Allcourses.filter(course => course.category == 'NewCourses');
   })
 }

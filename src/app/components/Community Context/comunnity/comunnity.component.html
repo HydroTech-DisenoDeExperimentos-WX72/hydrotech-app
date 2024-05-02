@@ -14,8 +14,8 @@
       <div class="trending">
         <div class="trending-content">
           <h3>Popular Topics</h3>
-          <div *ngFor="let trend of trends">
-            <p>{{ trend.name }}</p>
+          <div *ngFor="let post of posts">
+            <p>{{ post.title }}</p>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
   <!--
   <mat-toolbar >
     <mat-toolbar-row>
-      
+
       <mat-form-field>
         <input matInput placeholder="Buscar" />
       </mat-form-field>
@@ -43,7 +43,7 @@
     <div class="posts">
       <div *ngFor="let post of posts">
         <div class="post-header">
-          <h3>Agricultural events and fairs</h3>
+          <h3>Agricultural posts</h3>
         </div>
         <div class="post">
           <div class="post-content">
@@ -51,7 +51,7 @@
             <div class="post-details">
               <h4>{{ post.title }}</h4>
               <div class="tags">
-                <span *ngFor="let tag of post.tags">{{ tag }}</span>
+                <span>{{ post.tag }}</span>
               </div>
               <div class="post-description">
                 <p>{{ post.description }}</p>

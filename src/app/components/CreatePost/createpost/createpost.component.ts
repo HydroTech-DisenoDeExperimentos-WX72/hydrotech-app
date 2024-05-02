@@ -15,7 +15,7 @@ export class CreatepostComponent {
     date: new Date().toLocaleDateString('es-ES'),
     image: '',
     description: '',
-    tags: [] as string[],
+    tag:'',
     likes: 0,
     comments: 0,
     views: 0,
@@ -28,10 +28,6 @@ export class CreatepostComponent {
   ) {}
 
   createPost() {
-    this.newPost.tags = this.newPost.tags
-      .toString()
-      .split(',')
-      .map((tag) => tag.trim());
     this.dbService.createPost(this.newPost).subscribe(
       () => {
         this.toastr.success('Post creado exitosamente', 'Éxito');
